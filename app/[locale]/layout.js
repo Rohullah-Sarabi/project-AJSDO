@@ -1,9 +1,17 @@
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import useTextDirection from "@/context/useTextDirection";
 import { NextIntlClientProvider } from "next-intl";
+import {Roboto} from "next/font/google";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+
+const roboto = Roboto({
+  subsets:['latin'],
+  weight:["100", "300", "400", "500", "700", "900"]
+})
+
+const IranSans = localFont({src:"/FontsFree-Net-ir_sans.ttf"})
 
 export const metadata = {
   title: "AJSDO",
@@ -24,7 +32,7 @@ export default async function RootLayout({ children,params:{locale}}) {
 
   return (
     <html lang={locale} dir={direction}>
-      <body>
+      <body className={`${direction=="rtl"? IranSans.className:roboto.className} bg-[#fbfff1]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

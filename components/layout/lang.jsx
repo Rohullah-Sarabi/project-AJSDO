@@ -12,11 +12,11 @@ const LanguageChange = () => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter()
 
-  
+
   const openModal = () => {
     setIsOpen(!isOpen);
   };
-  
+
   const closeModal = () => {
     setIsOpen(false);
   };

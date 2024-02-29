@@ -16,11 +16,10 @@ export default function Navbar() {
     return (
         <nav className="w-full shadow-md bg-[#f7f9fb]">
             <div
-                className={`md:h-20 justify-between mx-auto lg:max-w-5xl md:items-center md:flex md:px-8 ${navbar ? "bg-[#f7f9fb]" : "bg-[#f7f9fb]"
-                    }`}
+                className={`md:flex md:justify-between md:h-20 mx-auto lg:max-w-5xl md:items-center  md:px-6 bg-[#f7f9fb]`}
             >
 
-                <div className="flex flex-row flex-1 items-center justify-between">
+                <div className="flex flex-row  items-center justify-between">
                     {/* <Logo /> */}
                     <Link href={"/link"}>
                         <div className="flex items-center justify-center gap-3 text-2xl text-black font-bold" title="Afghanistan Justic and Sustainable Development Organization">
@@ -47,36 +46,30 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-                {/* menu list */}
-                {/* md:flex flex-1 w-3/4 md:pb-0 md:mt-0 */}
-                <div
-                    className={`sm:flex flex-1 ${navbar ? "block bg-[#f7f9fb]" : "hidden"
-                        }`}
+                <ul
+                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} md:flex flex-col md:flex-row text-lg items-center justify-center`}
                 >
-                    <ul
-                        className={`flex flex-col items-center justify-center w-full md:flex md:flex-row md:justify-center md:items-center sm:gap-3`}
-                    >
-                        <li className="border sm:border-none w-full py-2 text-center hover:text-blue-500">
-                            <Link href={"/"}>
-                                {t('home')}
-                            </Link>
-                        </li>
-                        <li className="border sm:border-none w-full py-2 text-center hover:text-blue-500">
-                            <Link href={"/"}>
-                                {t('program')}
-                            </Link>
-                        </li>
-                        <li className="border sm:border-none w-full py-2 text-center hover:text-blue-500">
-                            <Link href={"/"}>{t('contact')}</Link>
-                        </li>
-                        <li className="border sm:border-none w-full py-2 text-center min-w-fit hover:text-blue-500">
-                            <Link href={"/company"}>{t('about')}</Link>
-                        </li>
-                        <li className="border flex justify-center sm:border-none w-full text-center min-w-fit hover:text-blue-500">
-                            <LanguageChange />
-                        </li>
-                    </ul>
-                </div>
+                    <li className="border-t sm:border-none w-full flex text-center hover:text-blue-500">
+                        <Link href={"/"} className="grow p-2 justify-center">
+                            {t('home')}
+                        </Link>
+                    </li>
+                    <li className="border-t sm:border-none w-full hover:text-blue-500">
+                        <Link href={"/"} className="flex grow p-2 justify-center">
+                            {t('program')}
+                        </Link>
+                    </li>
+                    <li className="border-t sm:border-none w-full flex text-center hover:text-blue-500">
+                        <Link href={"/"} className="grow p-2 justify-center">{t('contact')}</Link>
+                    </li>
+                    <li className="border-t sm:border-none w-full text-center min-w-fit hover:text-blue-500">
+                        <Link href={"/company"} className="grow p-2 justify-center">{t('about')} </Link>
+                    </li>
+                    <li className="border-t sm:border-none flex justify-center w-full text-center min-w-fit hover:text-blue-500">
+                        <LanguageChange />
+                    </li>
+                </ul>
+                {/* </div> */}
             </div>
         </nav>
     )
