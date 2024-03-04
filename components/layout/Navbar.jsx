@@ -11,29 +11,27 @@ import { useTranslations } from "next-intl";
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const t = useTranslations("navbar")
-    // backdrop-brightness-50
-    // bg-[url(/assets/bg_1.jpg)] bg-cover bg-center
     return (
-        <nav className="w-full shadow-md bg-[#f7f9fb]">
-            <div
-                className={`md:flex md:justify-between md:h-20 mx-auto lg:max-w-5xl md:items-center  md:px-6 bg-[#f7f9fb]`}
-            >
-
-                <div className="flex flex-row  items-center justify-between">
-                    {/* <Logo /> */}
-                    <Link href={"/link"}>
-                        <div className="flex items-center justify-center gap-3 text-2xl text-black font-bold" title="Afghanistan Justic and Sustainable Development Organization">
+        <nav className="w-full h-20 sm:h-52 shadow-md bg-[#f7f9fb] sticky top-0">
+            <div className="flex flex-col w-full lg:max-w-5xl sm:px-5 bg-[#f7f9fb]">
+                <div className="flex flex-row px-2 py-2 sm:py-0 sm:px-5 items-center justify-between">
+                    <Link href={"/"}>
+                        <div className=" flex items-center justify-center gap-5 text-2xl text-black font-bold" title="Afghanistan Justic and Sustainable Development Organization">
                             <Image
                                 alt={"logo"}
                                 src={Logo}
-                                height={1000}
-                                width={1000}
-                                className="h-12 w-12 sm:h-16 sm:w-16"
+                                height={500}
+                                width={500}
+                                className="h-16 w-16 sm:h-40 sm:w-40"
                             />
-                            <p className="text-lg"><span className="text-[#7ea7db] sm:text-4xl">A</span><span className="sm:text-4xl">JSDO</span></p>
+                            <div className="h-14 sm:h-28 bg-[#7ea7db] w-[1px] sm:w-[2px] rounded-full"/>
+                            <div className="flex flex-col gap-1 sm:gap-3">
+                                <p className="text-lg sm:text-4xl">AJSDO</p>
+                                <p title="Afghanistan Justic and Sustainable Development Organization" className="text-xs sm:text-lg">Afghanistan Justic and Sustainable Development Organization</p>
+                            </div>
                         </div>
                     </Link>
-                    <div className="md:hidden">
+                    <div className="sm:hidden">
                         <button
                             className="p-2 text-black rounded-md outline-none focus:border-gray-400 focus:border"
                             onClick={() => setNavbar(!navbar)}
@@ -47,29 +45,28 @@ export default function Navbar() {
                     </div>
                 </div>
                 <ul
-                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} md:flex flex-col md:flex-row text-lg items-center justify-center`}
+                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} z-50 sm:flex flex-col sm:flex-row text-lg items-center justify-center sm:justify-start`}
                 >
-                    <li className="border-t sm:border-none w-full flex text-center hover:text-blue-500">
+                    <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={"/"} className="grow p-2 justify-center">
                             {t('home')}
                         </Link>
                     </li>
-                    <li className="border-t sm:border-none w-full hover:text-blue-500">
+                    <li className="border-t sm:border-none w-full sm:w-fit hover:text-blue-500">
                         <Link href={"/"} className="flex grow p-2 justify-center">
                             {t('program')}
                         </Link>
                     </li>
-                    <li className="border-t sm:border-none w-full flex text-center hover:text-blue-500">
+                    <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={"/"} className="grow p-2 justify-center">{t('contact')}</Link>
                     </li>
-                    <li className="border-t sm:border-none w-full text-center min-w-fit hover:text-blue-500">
+                    <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={"/company"} className="grow p-2 justify-center">{t('about')} </Link>
                     </li>
-                    <li className="border-t sm:border-none flex justify-center w-full text-center min-w-fit hover:text-blue-500">
+                    <li className="border-t border sm:border-none flex justify-center w-full sm:w-fit text-center min-w-fit hover:text-blue-500">
                         <LanguageChange />
                     </li>
                 </ul>
-                {/* </div> */}
             </div>
         </nav>
     )

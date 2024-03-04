@@ -78,7 +78,7 @@ const LanguageChange = () => {
       </button>
 
       {isOpen && (
-        <div className="relative sm:fixed shadow-lg  z-10 sm:top-5 mt-0  md:mt-12 border">
+        <div className="relative sm:fixed shadow-lg  z-10 sm:top-10 mt-0  sm:mt-40 border">
           <div className="bg-[#f7f9fb] w-full shadow-lg" ref={modalRef}>
             {availableLanguages.map((language) => {
               if (
