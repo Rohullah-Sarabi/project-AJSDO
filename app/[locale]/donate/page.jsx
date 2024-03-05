@@ -25,15 +25,15 @@ function Donate() {
                 </div>
                 <div className="flex flex-row gap-3">
                     <p className="font-bold text-lg">Beneficiary Bank Swift Code:</p>
-                    <p className="font-semibold text-base">Islamic Bank of Afghanistan</p>
+                    <p className="font-semibold text-base">IBAFAFKA</p>
                 </div>
                 <div className="flex flex-row gap-3">
                     <p className="font-bold text-lg">Correspondent Bank:</p>
-                    <p className="font-semibold text-base">Islamic Bank of Afghanistan</p>
+                    <p className="font-semibold text-base">(BMCE) Banque Marocainedu Commerce Exterieur International SA</p>
                 </div>
                 <div className="flex flex-row gap-3">
                     <p className="font-bold text-lg">Beneficiary Bank Account Number:</p>
-                    <p className="font-semibold text-base">Islamic Bank of Afghanistan</p>
+                    <p className="font-semibold text-base">ES3102198601010096601182</p>
                 </div>
                 <div className="flex flex-row gap-3">
                     <p className="font-bold text-lg">Correspondent Bank SWIFT code:</p>
