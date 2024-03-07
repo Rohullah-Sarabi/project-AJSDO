@@ -4,7 +4,8 @@ function ContextContainer() {
             <div className="flex flex-col justify-center gap-5">
                 <div className="flex flex-col justify-center items-center gap-5">
                     <h1 className="text-base sm:text-2xl font-medium sm:font-semibold text-center">VISION STATEMENT</h1>
-                    <p className="text-sm sm:text-lg text-[#3c3744]">Providing Social Welfare</p>
+                    {/* <p className="text-sm sm:text-lg text-[#3c3744]">Providing Social Welfare</p> */}
+                    <p className="text-sm sm:text-lg text-[#3c3744]"> Empowering communities, and Bulding a better future</p>
                 </div>
                 <div className="flex justify-center items-center">
                     <hr className="w-1/12 h-1 bg-blue-400 rounded-md" />

@@ -1,44 +1,22 @@
+
+import { PContainer, Paragraph } from "@/components/ParagraphContainer/PContainer";
+import { useTranslations } from "next-intl";
+
 function Donate() {
+    const t = useTranslations("about")
     return (
-        <div className="w-2/3 mx-auto flex flex-col p-5">
-            <p className="text-justify px-5 text-lg">
-                Afghanistan Justice and Sustainable Development Organization (AJSDO) as a social, non-governmental and non-profit organization regardless of political ethnic, racial, positional affiliations, provides voluntary and humanitarian services to the needy people of the society.
-                AJSDO is an afghan local and licensed NGO registered by (5575) registration number in ministry of Economic in 2022.
-            </p>
-            <div className="flex flex-col mt-5 px-5">
-                <h1 className="text-2xl font-extrabold">BANK DETAILS:</h1>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary name:</p>
-                    <p className="font-semibold text-base">Afghanistan Justice and sustainable Development Organization (AJSDO)</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary Account number:</p>
-                    <p className="font-semibold text-base">05102200000698</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary Bank:</p>
-                    <p className="font-semibold text-base">Islamic Bank of Afghanistan</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary Bank Address:</p>
-                    <p className="font-semibold text-base">Islamic Bank of Afghanistan</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary Bank Swift Code:</p>
-                    <p className="font-semibold text-base">IBAFAFKA</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Correspondent Bank:</p>
-                    <p className="font-semibold text-base">(BMCE) Banque Marocainedu Commerce Exterieur International SA</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Beneficiary Bank Account Number:</p>
-                    <p className="font-semibold text-base">ES3102198601010096601182</p>
-                </div>
-                <div className="flex flex-row gap-3">
-                    <p className="font-bold text-lg">Correspondent Bank SWIFT code:</p>
-                    <p className="font-semibold text-base">BMCEESMM</p>
-                </div>
+        <div className="w-full sm:w-2/3 mx-auto flex flex-col p-5">
+            <Paragraph style={"text-justify sm:px-5 text-sm sm:text-lg"} content={t("about")} />
+            <div className="flex flex-col mt-5 sm:px-5 text-[#3c3744]">
+                <Paragraph style={"text-base sm:text-2xl font-extrabold capitalize"} content={t("bank details")} />
+                <PContainer title={t("Beneficiary name.title")} content={t('Beneficiary name.content')} />
+                <PContainer title={t("Account number.title")} content={t('Account number.content')} />
+                <PContainer title={t("Bank.title")} content={t('Bank.content')} />
+                <PContainer title={t("Bank Address.title")} content={t('Bank Address.content')} />
+                <PContainer title={t("Bank Swift Code.title")} content={t('Bank Swift Code.content')} />
+                <PContainer title={t("Correspondent Bank.title")} content={t('Correspondent Bank.content')} />
+                <PContainer title={t("Bank Account Number.title")} content={t('Bank Account Number.content')} />
+                <PContainer title={t("Correspondent Bank SWIFT code.title")} content={t('Correspondent Bank SWIFT code.content')} />
             </div>
         </div>
     )

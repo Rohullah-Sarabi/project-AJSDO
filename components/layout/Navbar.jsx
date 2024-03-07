@@ -12,12 +12,11 @@ import { Dropdown } from "flowbite-react";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
-
     const t = useTranslations("navbar")
     return (
-        <nav className="w-full h-20 sm:h-52 bg-[#f7f9fb]">
-            <div className="flex flex-col w-full lg:max-w-5xl sm:px-5 bg-[#f7f9fb]">
-                <div className="flex flex-row px-2 py-2 sm:py-0 sm:px-5 items-center justify-between">
+        <nav className="w-full h-20 sm:h-[210px] bg-[#f7f9fb] shadow-md">
+            <div className="flex flex-col w-full mx-auto lg:max-w-7xl sm:px-5 bg-[#f7f9fb]">
+                <div className="flex flex-row px-2 py-1 sm:py-0 sm:px-5 items-center justify-between">
                     <Link href={"/"}>
                         <div className=" flex items-center justify-center gap-5 text-2xl text-black font-bold" title="Afghanistan Justic and Sustainable Development Organization">
                             <Image
@@ -29,8 +28,8 @@ export default function Navbar() {
                             />
                             <div className="h-14 sm:h-28 bg-[#7ea7db] w-[1px] sm:w-[2px] rounded-full" />
                             <div className="flex flex-col gap-1 sm:gap-3">
-                                <p className="text-lg sm:text-4xl">AJSDO</p>
-                                <p title="Afghanistan Justic and Sustainable Development Organization" className="text-xs sm:text-lg">Afghanistan Justic and Sustainable Development Organization</p>
+                                <p className="text-lg sm:text-4xl uppercase">{t("title.abbreuiation")}</p>
+                                <p title="Afghanistan Justic and Sustainable Development Organization" className="text-xs sm:text-lg">{t("title.name")}</p>
                             </div>
                         </div>
                     </Link>
@@ -48,28 +47,28 @@ export default function Navbar() {
                     </div>
                 </div>
                 <ul
-                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} z-50 sm:flex flex-col sm:flex-row text-lg items-center justify-center sm:justify-start`}
+                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} z-50 sm:flex flex-col sm:flex-row-reverse text-lg gap-5 items-center justify-center sm:justify-start`}
                 >
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={"/"} className="grow p-2 justify-center">
-                            {t('home')}
+                        <Link href={t("home.url")} className="grow p-2 justify-center">
+                            {t('home.title')}
                         </Link>
                     </li>
                     <li className="border-t sm:border-none text-center w-full sm:w-fit hover:text-blue-500 border">
                         <Dropdown label={t('program')} inline>
-                            <Dropdown.Item as={Link} href="/en/program/progress">In Progress</Dropdown.Item>
-                            <Dropdown.Item as={Link} href={"/en/program/acomplated"}>Acomplated</Dropdown.Item>
-                            <Dropdown.Item as={Link} href={"/en/program/planline"} className="capitalize">on planline</Dropdown.Item>
+                            <Dropdown.Item as={Link} href={t("progress.url")} className="capitalize">{t("progress.title")}</Dropdown.Item>
+                            <Dropdown.Item as={Link} href={t("acomplated.url")} className="capitalize">{t("acomplated.title")}</Dropdown.Item>
+                            <Dropdown.Item as={Link} href={t("planline.url")} className="capitalize">{t("planline.title")}</Dropdown.Item>
                         </Dropdown>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={"/"} className="grow p-2 justify-center">{t('contact')}</Link>
+                        <Link href={t("contact.url")} className="grow p-2 justify-center capitalize">{t('contact.title')}</Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={"/en/about"} className="grow p-2 justify-center">{t('about')} </Link>
+                        <Link href={t("about.url")} className="grow p-2 justify-center capitalize">{t('about.title')} </Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={"/en/donate"} className="grow p-2 justify-center">{t('donate')}</Link>
+                        <Link href={t("donate.url")} className="grow p-2 justify-center capitalize">{t('donate.title')}</Link>
                     </li>
                     <li className="border-t border sm:border-none flex justify-center w-full sm:w-fit text-center min-w-fit hover:text-blue-500">
                         <LanguageChange />

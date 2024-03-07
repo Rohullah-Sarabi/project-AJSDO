@@ -7,7 +7,7 @@ function AboutPage() {
         <div className="w-4/5 sm:w-2/3 m-auto flex flex-col gap-5 justify-center mt-4 sm:p-5">
             <div className="flex flex-col justify-center gap-5">
                 <div className="flex flex-col justify-center items-center gap-5">
-                    <h1 className="text-base sm:text-2xl font-medium sm:font-semibold text-start">About AJSDO</h1>
+                    <h1 className="text-lg mt-3 sm:text-2xl font-semibold text-start">About AJSDO</h1>
                     <div className="flex flex-col justify-start text-justify">
                         <p className="text-sm sm:text-lg font-medium sm:font-semibold text-[#3c3744]">Afghanistan Justice and sustainable Development Organization (AJSDO)</p>
                         <p className="text-sm sm:text-lg text-[#3c3744]">

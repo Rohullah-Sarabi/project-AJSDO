@@ -1,9 +1,100 @@
 {
-    "navbar":{
-        "home":"Home",
-        "program":"Programs",
-        "contact":"Contact",
-        "about":"About Us",
-        "donate":"Donate"
+    "navbar": {
+        "title":{
+            "abbreuiation":"ajsdo",
+            "name":"Afghanistan Justic and Sustainable Development Organization"
+        },
+        "home": {
+            "title": "Home",
+            "url": "/en"
+        },
+        "program": "Programs",
+        "progress": {
+            "title": "in progress",
+            "url": "/en/program/progress"
+        },
+        "acomplated": {
+            "title": "acomplated",
+            "url": "/en/program/acomplated"
+        },
+        "planline": {
+            "title": "on plan",
+            "url": "/en/program/planline"
+        },
+        "contact": {
+            "title": "Contact",
+            "url": "/en/contact"
+        },
+        "about": {
+            "title": "About Us",
+            "url": "/en/about"
+        },
+        "donate": {
+            "title": "donate",
+            "url": "/en/donate"
+        }
+    },
+    "about": {
+        "about": "Afghanistan Justice and Sustainable Development Organization (AJSDO) as a social, non-governmental and non-profit organization regardless of political ethnic, racial, positional affiliations, provides voluntary and humanitarian services to the needy people of the society. AJSDO is an afghan local and licensed NGO registered by (5575) registration number in ministry of Economic in 2022.",
+        "bank details": "bank details",
+        "Beneficiary name": {
+            "title": "Beneficiary name",
+            "content": "Afghanistan Justice and sustainable Development Organization (AJSDO)"
+        },
+        "Account number": {
+            "title": "Beneficiary Account number",
+            "content": "05102200000698"
+        },
+        "Bank": {
+            "title": "Beneficiary Bank",
+            "content": "Islamic Bank of Afghanistan"
+        },
+        "Bank Address": {
+            "title": "Beneficiary Bank Address",
+            "content": "Bazar Bamyan, Bamyan, Afghanistan"
+        },
+        "Bank Swift Code": {
+            "title": "Beneficiary Bank Swift Code",
+            "content": "IBAFAFKA"
+        },
+        "Correspondent Bank": {
+            "title": "Correspondent Bank",
+            "content": "(BMCE) Banque Marocainedu Commerce Exterieur International SA"
+        },
+        "Bank Account Number": {
+            "title": "Beneficiary Bank Account Number",
+            "content": "ES3102198601010096601182"
+        },
+        "Correspondent Bank SWIFT code": {
+            "title": "Correspondent Bank SWIFT code",
+            "content": "BMCEESMM"
+        }
+    },
+    "contact": {
+        "contact": "contact us",
+        "message": "If you wish to learn more about our work or become a partner and/or volunteer, please contact @ajsdo.ngo@gmail.com.",
+        "name": {
+            "label": "First name",
+            "placeholder": "Ali",
+            "required": "User Name is required!",
+            "roleMessage": "Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+        },
+        "lastName": {
+            "label": "Last Name",
+            "placeholder": "Example Sarabi",
+            "required": "Last Name is required!",
+            "roleMessage": "Last Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+        },
+        "email": {
+            "label": "Email Address",
+            "placeholder": "example@gmail.com",
+            "required": "Email address is required.",
+            "roleMessage": "Invalid email address format"
+        },
+        "content": {
+            "label": "Your message",
+            "placeholder": "Write your thoughts here...",
+            "required": "your message is required."
+        }
     }
 }
