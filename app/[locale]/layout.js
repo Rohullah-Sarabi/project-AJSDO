@@ -31,9 +31,8 @@ export default async function RootLayout({ children,params:{locale}}) {
     console.log(error.message)
     notFound();
   }
-
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={locale} dir={`${direction}`}>
       <body className={`${direction=="rtl"? IranSans.className:roboto.className} bg-[#fbfff1]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar/>

@@ -1,17 +1,17 @@
 import { useLocale } from "next-intl";
 // import Link from "next-intl/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect, useTransition } from "react";
 import { GrLanguage } from "react-icons/gr";
 
 const LanguageChange = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
   const modalRef = useRef(null);
 
   const [isPending, startTransition] = useTransition();
   const router = useRouter()
-
+  const pathname = usePathname()
 
   const openModal = () => {
     setIsOpen(!isOpen);

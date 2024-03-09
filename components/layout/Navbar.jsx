@@ -55,11 +55,7 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className="border-t sm:border-none text-center w-full sm:w-fit hover:text-blue-500 border">
-                        <Dropdown label={t('program')} inline>
-                            <Dropdown.Item as={Link} href={t("progress.url")} className="capitalize">{t("progress.title")}</Dropdown.Item>
-                            <Dropdown.Item as={Link} href={t("acomplated.url")} className="capitalize">{t("acomplated.title")}</Dropdown.Item>
-                            <Dropdown.Item as={Link} href={t("planline.url")} className="capitalize">{t("planline.title")}</Dropdown.Item>
-                        </Dropdown>
+                        <Link href={t("program.url")} className="grow p-2 justify-center capitalize">{t('program.title')}</Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={t("contact.url")} className="grow p-2 justify-center capitalize">{t('contact.title')}</Link>

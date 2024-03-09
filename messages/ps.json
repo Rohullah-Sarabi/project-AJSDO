@@ -8,19 +8,7 @@
             "title": "اصلي پاڼه",
             "url": "/ps"
         },
-        "program": "پروګرامونه",
-        "progress": {
-            "title": "در حال جریان",
-            "url": "/ps/program/progress"
-        },
-        "acomplated": {
-            "title": "تکمیل شده",
-            "url": "/ps/program/acomplated"
-        },
-        "planline": {
-            "title": "پلان شده",
-            "url": "/ps/program/planline"
-        },
+        "program":{"title":"پروګرامونه","url":"/ps/program"},
         "contact": {
             "title":"اړیکه ونیسئ",
             "url": "/ps/contact"

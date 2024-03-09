@@ -8,19 +8,7 @@
             "title": "صفحه اصلی",
             "url": "/fa"
         },
-        "program": "برنامه ها",
-        "progress": {
-            "title": "در حال جریان",
-            "url": "/fa/program/progress"
-        },
-        "acomplated": {
-            "title": "تکمیل شده",
-            "url": "/fa/program/acomplated"
-        },
-        "planline": {
-            "title": "پلان شده",
-            "url": "/fa/program/planline"
-        },
+        "program":{"title":"برنامه ها","url":"/fa/program"},
         "contact": {
             "title": "ارتباط با ما",
             "url": "/fa/contact"

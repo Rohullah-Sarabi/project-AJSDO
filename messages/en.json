@@ -8,19 +8,7 @@
             "title": "Home",
             "url": "/en"
         },
-        "program": "Programs",
-        "progress": {
-            "title": "in progress",
-            "url": "/en/program/progress"
-        },
-        "acomplated": {
-            "title": "acomplated",
-            "url": "/en/program/acomplated"
-        },
-        "planline": {
-            "title": "on plan",
-            "url": "/en/program/planline"
-        },
+        "program":{"title":"Programs","url":"/en/program"} ,
         "contact": {
             "title": "Contact",
             "url": "/en/contact"
