@@ -50,7 +50,8 @@ function Footer() {
                                     <FaFacebookF className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
-                                    <FaTwitter className="text-2xl"/>
+                                    <FaTwitter
+                                     className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
                                     <TfiYoutube className="text-2xl"/>
