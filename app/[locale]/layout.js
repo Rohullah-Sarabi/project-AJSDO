@@ -35,9 +35,7 @@ export default async function RootLayout({ children,params:{locale}}) {
     <html lang={locale} dir={`${direction}`}>
       <body className={`${direction=="rtl"? IranSans.className:roboto.className} bg-[#fbfff1]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar/>
           {children}
-          <Footer/>
         </NextIntlClientProvider>
         </body>
     </html>

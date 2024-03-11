@@ -3,16 +3,17 @@ import CarouselSilder from "@/components/Carousel/Carousel";
 import CardComponent from "@/components/card";
 import Activies from "@/components/contextContainer/activies";
 import ContextContainer from "@/components/contextContainer/container";
-import { Button, Card } from "flowbite-react";
+import Footer from "@/components/footer";
+import Navbar from "@/components/layout/Navbar";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
+
 
 
 export default function Home() {
   const t = useTranslations("navbar");
   return (
     <>
+      <Navbar />
       <div className="w-full">
         <CarouselSilder />
       </div>
@@ -40,6 +41,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

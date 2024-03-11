@@ -1,9 +1,12 @@
-import ContextContainer from "@/components/contextContainer/container";
+import Footer from "@/components/footer";
+import Navbar from "@/components/layout/Navbar";
 import { Badge, List } from "flowbite-react";
 import { HiCheck } from "react-icons/hi"
 
 function AboutPage() {
     return (
+        <>
+        <Navbar/>
         <div className="w-4/5 sm:w-2/3 m-auto flex flex-col gap-5 justify-center mt-4 sm:p-5">
             <div className="flex flex-col justify-center gap-5">
                 <div className="flex flex-col justify-center items-center gap-5">
@@ -127,6 +130,8 @@ function AboutPage() {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 
