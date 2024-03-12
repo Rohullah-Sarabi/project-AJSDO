@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedin, FaTwitter, FaX } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi"
 import { SiGmail } from "react-icons/si"
 
@@ -50,7 +50,8 @@ function Footer() {
                                     <FaFacebookF className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
-                                    <FaTwitter className="text-2xl"/>
+                                    <FaX
+                                     className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
                                     <TfiYoutube className="text-2xl"/>

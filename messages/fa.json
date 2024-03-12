@@ -26,108 +26,66 @@
         }
     },
     "about": {
-        "about": "Afghanistan Justice and Sustainable Development Organization (AJSDO) as a social, non-governmental and non-profit organization regardless of political ethnic, racial, positional affiliations, provides voluntary and humanitarian services to the needy people of the society. AJSDO is an afghan local and licensed NGO registered by (5575) registration number in ministry of Economic in 2022.",
-        "bank details": "bank details",
+        "about": "موسسه عدالت و توسعه پایدار افغانستان (AJSDO) به عنوان یک سازمان اجتماعی، غیردولتی و غیرانتفاعی بدون در نظر گرفتن وابستگی های سیاسی قومی، نژادی، موقعیتی، خدمات داوطلبانه و بشردوستانه را به نیازمندان جامعه ارائه می کند. AJSDO یک NGO محلی و دارای مجوز افغانی است که در سال 2022 توسط شماره ثبت (5575) در وزارت اقتصاد ثبت شده است.",
+        "bank details": "جزيیات بانکی",
         "Beneficiary name": {
-            "title": "Beneficiary name",
-            "content": "Afghanistan Justice and sustainable Development Organization (AJSDO)"
+            "title": "نام ذینفع",
+            "content": "موسسه عدالت و توسعه پایدار افغانستان (AJSDO)"
         },
         "Account number": {
-            "title": "Beneficiary Account number",
+            "title": "شماره حساب ذینفع",
             "content": "05102200000698"
         },
         "Bank": {
-            "title": "Beneficiary Bank",
-            "content": "Islamic Bank of Afghanistan"
+            "title": "بانک ذینفع",
+            "content": "بانک اسلامی افغانستان"
         },
         "Bank Address": {
-            "title": "Beneficiary Bank Address",
-            "content": "Bazar Bamyan, Bamyan, Afghanistan"
+            "title": "آدرس بانک ذینفع",
+            "content": "بازار بامیان، بامیان، افغانستان"
         },
         "Bank Swift Code": {
-            "title": "Beneficiary Bank Swift Code",
+            "title": "سوئیفت کود بانک ذینفع",
             "content": "IBAFAFKA"
         },
         "Correspondent Bank": {
-            "title": "Correspondent Bank",
+            "title": "بانک همکار",
             "content": "(BMCE) Banque Marocainedu Commerce Exterieur International SA"
         },
         "Bank Account Number": {
-            "title": "Beneficiary Bank Account Number",
+            "title": "شماره حساب بانکی ذینفع",
             "content": "ES3102198601010096601182"
         },
         "Correspondent Bank SWIFT code": {
-            "title": "Correspondent Bank SWIFT code",
+            "title": "سوئیفت کود بانک همکار",
             "content": "BMCEESMM"
         }
     },
     "contact": {
-        "contact": "contact us",
-        "message": "If you wish to learn more about our work or become a partner and/or volunteer, please contact @ajsdo.ngo@gmail.com.",
+        "contact": "تماس با ما",
+        "message": "اگر می‌خواهید درباره کار ما بیشتر بدانید یا شریک و یا داوطلب شوید، لطفاً با @ajsdo.ngo@gmail.com تماس بگیرید.",
         "name": {
-            "label": "First name",
-            "placeholder": "Ali",
-            "required": "User Name is required!",
-            "roleMessage": "Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+            "label": "نام",
+            "placeholder": "لطفا نام خود را وارد کنید!",
+            "required": "نام کاربری لازم است!",
+            "roleMessage": "نام باید حداقل 3 حرف داشته باشد و فقط شامل حروف الفبا و فاصله باشد"
         },
         "lastName": {
-            "label": "Last Name",
-            "placeholder": "Example Sarabi",
-            "required": "Last Name is required!",
-            "roleMessage": "Last Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+            "label": "نام خانوادگی",
+            "placeholder": "به طور مثال سرابی یا احمدی",
+            "required": "نام خانوادگی الزامی است!",
+            "roleMessage": "نام باید حداقل 3 حرف داشته باشد و فقط شامل حروف الفبا و فاصله باشد"
         },
         "email": {
             "label": "Email Address",
-            "placeholder": "example@gmail.com",
+            "placeholder":"example@gmail.com",
             "required": "Email address is required.",
             "roleMessage": "Invalid email address format"
         },
-        "content": {
-            "label": "Your message",
-            "placeholder": "Write your thoughts here...",
-            "required": "your message is required."
-        }
-    },
-    "activity": {
-        "education": {
-            "title": "تحصیلات",
-            "image": "/assets/educationBanner.png",
-            "1": "افزایش دسترسی به آموزش با کیفیت برای کودکان و جوانان بی بضاعت.",
-            "2": " تقویت زیرساخت ها و منابع آموزشی در جوامع حاشیه نشین.",
-            "3": "بهبود نرخ سواد و ارتقای فرصت های یادگیری مادام العمر برای همه.",
-            "4": "اجرای برنامه های آموزش حرفه ای برای تجهیز افراد به مهارت های عملی برای اشتغال."
-        },
-        "health": {
-            "title": "بهداشت و درمان",
-            "image": "/assets/medical.jpg",
-            "1": " ارائه خدمات بهداشتی در دسترس و مقرون به صرفه به مردم محروم.",
-            "2": "بهبود نتایج سلامت با تمرکز بر مراقبت های پیشگیرانه، درمان، بهداشت و آموزش.",
-            "3": "همکاری با ارائه دهندگان مراقبت های بهداشتی و سازمان های محلی برای تقویت سیستم های مراقبت های بهداشتی.",
-            "4": "سازماندهی کمپین ها و کارگاه های آموزشی آگاهی از سلامت برای آموزش جوامع در مورد اقدامات پیشگیرانه مراقبت های بهداشتی."
-        },
-        "social": {
-            "title": "خدمات اجتماعی",
-            "image": "/assets/socialServecs.jpg",
-            "1": "خدمات جامع اجتماعی، از جمله حمایت معیشتی، سرپناه، و مشاوره ارائه دهید.",
-            "2": "ترویج شمول اجتماعی و توانمندسازی افراد و جوامع به حاشیه رانده شده.",
-            "3": " تسهیل برنامه های توسعه مهارت و آموزش حرفه ای برای افزایش فرصت های معیشتی.",
-            "4": "اجرای برنامه های کاهش فقر که به علل ریشه ای فقر می پردازد.",
-            "5": "تقویت توانمندی اقتصادی از طریق فعالیت های درآمدزا و حمایت از کارآفرینی."
-        },
-        "agriculture": {
-            "title": "کشاورزی",
-            "image": "/assets/agriculture.jpg",
-            "1": "تسهیل برنامه های آموزشی کشاورزی برای تقویت تکنیک های کشاورزی، تنوع محصولات کشاورزی و شیوه های کشاورزی پایدار.",
-            "2": "ایجاد باغ های اجتماعی یا تعاونی های کشاورزی برای ارتقای خودکفایی و درآمدزایی.",
-            "3": "فراهم آوردن دسترسی به منابع کشاورزی مانند بذر، ابزار و سیستم های آبیاری برای حمایت از کشاورزان محلی."
-        },
-        "globalWarming": {
-            "title": "گرمایش جهانی",
-            "image": "/assets/global.jpg",
-            "1": " افزایش آگاهی در مورد تغییر اقلیم و تأثیر آن بر جوامع محلی.",
-            "2": "ترویج شیوه های انرژی پایدار، مانند پذیرش انرژی های تجدیدپذیر و ابتکارات بهره وری انرژی.",
-            "3": "اجرای برنامه های درختکاری و کمپین های پاکسازی محیطی برای کاهش تخریب محیط زیست.",
-            "4": "انجام تحقیقات در مورد تغییر اقلیم برای درک بهتر پیامدهای محلی آن و توسعه استراتژی های کاهش هدفمند."
+        "content":{
+            "label":"Your message",
+            "placeholder":"Write your thoughts here...",
+            "required":"your message is required."
         }
     }
 }

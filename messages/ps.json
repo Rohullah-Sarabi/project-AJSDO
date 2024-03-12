@@ -23,66 +23,66 @@
         }
     },
     "about": {
-        "about": "Afghanistan Justice and Sustainable Development Organization (AJSDO) as a social, non-governmental and non-profit organization regardless of political ethnic, racial, positional affiliations, provides voluntary and humanitarian services to the needy people of the society. AJSDO is an afghan local and licensed NGO registered by (5575) registration number in ministry of Economic in 2022.",
-        "bank details": "bank details",
+        "about": "د افغانستان د عدالت او دوامدارې پراختیا موسسه (AJSDO) د یوې ټولنیزې، غیر دولتي او غیر انتفاعي موسسې په توګه د سیاسي، نژادي، سمتي تړاوونو پرته، د ټولنې اړو خلکو ته داوطلبانه او بشري خدمتونه وړاندې کوي. AJSDO یوه افغان محلي او جواز لرونکې نادولتي موسسه ده چې په (۵۵۷۵) راجستریشن شمیره په ۲۰۲۲ کال کې د اقتصاد په وزارت کې ثبت شوې ده.",
+        "bank details": "د بانک توضیحات",
         "Beneficiary name": {
-            "title": "Beneficiary name",
-            "content": "Afghanistan Justice and sustainable Development Organization (AJSDO)"
+            "title": "د بانک توضیحات",
+            "content": "د افغانستان د عدالت او دوامدارې پراختیا اداره (AJSDO)"
         },
         "Account number": {
-            "title": "Beneficiary Account number",
+            "title": "د ګټه اخیستونکي حساب شمیره",
             "content": "05102200000698"
         },
         "Bank": {
-            "title": "Beneficiary Bank",
-            "content": "Islamic Bank of Afghanistan"
+            "title": "ګټه اخیستونکی بانک",
+            "content": "د افغانستان اسلامي بانک"
         },
         "Bank Address": {
-            "title": "Beneficiary Bank Address",
-            "content": "Bazar Bamyan, Bamyan, Afghanistan"
+            "title": "د ګټه اخیستونکي بانک پته",
+            "content": "بازار بامیان، بامیان، افغانستان"
         },
         "Bank Swift Code": {
-            "title": "Beneficiary Bank Swift Code",
+            "title": "د ګټه اخیستونکي بانک سویفټ کوډ",
             "content": "IBAFAFKA"
         },
         "Correspondent Bank": {
-            "title": "Correspondent Bank",
+            "title": "ارتباطي بانک",
             "content": "(BMCE) Banque Marocainedu Commerce Exterieur International SA"
         },
         "Bank Account Number": {
-            "title": "Beneficiary Bank Account Number",
+            "title": "د ګټه اخیستونکي بانکي حساب شمیره",
             "content": "ES3102198601010096601182"
         },
         "Correspondent Bank SWIFT code": {
-            "title": "Correspondent Bank SWIFT code",
+            "title": "د اړونده بانک SWIFT کوډ",
             "content": "BMCEESMM"
         }
     },
     "contact": {
-        "contact": "contact us",
-        "message": "If you wish to learn more about our work or become a partner and/or volunteer, please contact @ajsdo.ngo@gmail.com.",
+        "contact": "تماس با ما",
+        "message": "که تاسو غواړئ زموږ د کار په اړه نور معلومات زده کړئ یا شریک او/یا داوطلب شئ، مهرباني وکړئ د @ajsdo.ngo@gmail.com سره اړیکه ونیسئ.",
         "name": {
-            "label": "First name",
-            "placeholder": "Ali",
-            "required": "User Name is required!",
-            "roleMessage": "Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+            "label": "لومړی نوم",
+            "placeholder": "مهرباني وکړئ خپل نوم ولیکئ!",
+            "required": "د کارن نوم اړین دی!",
+            "roleMessage": "نوم باید لږترلږه 3 حروف اوږد وي او یوازې د الفبا حروف او ځایونه ولري"
         },
         "lastName": {
-            "label": "Last Name",
-            "placeholder": "Example Sarabi",
-            "required": "Last Name is required!",
-            "roleMessage": "Last Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+            "label": "تخلص",
+            "placeholder": "د سرابي بېلګه",
+            "required": "وروستی نوم اړین دی!",
+            "roleMessage": "وروستی نوم باید لږترلږه 3 حروف اوږد وي او یوازې د الفبا حروف او ځایونه ولري"
         },
         "email": {
-            "label": "Email Address",
+            "label": "بریښنا‌لیک",
             "placeholder":"example@gmail.com",
-            "required": "Email address is required.",
-            "roleMessage": "Invalid email address format"
+            "required": "د بریښنالیک پته اړینه ده.",
+            "roleMessage": "د بریښنالیک پته ناسمه بڼه"
         },
         "content":{
-            "label":"Your message",
-            "placeholder":"Write your thoughts here...",
-            "required":"your message is required."
+            "label":"ستا پیغام",
+            "placeholder":"خپل نظرونه دلته ولیکئ...",
+            "required":"ستاسو پیغام اړین دی."
         }
     },
     "activity": {

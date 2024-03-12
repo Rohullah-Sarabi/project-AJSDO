@@ -23,8 +23,8 @@ export default function Navbar() {
                                 alt={"logo"}
                                 src={Logo}
                                 height={500}
-                                width={500}
-                                className="h-16 w-16 sm:h-40 sm:w-40"
+                                width={550}
+                                className="h-16 w-16.7 sm:h-40 sm:w-40"
                             />
                             <div className="h-14 sm:h-28 bg-[#7ea7db] w-[1px] sm:w-[2px] rounded-full" />
                             <div className="flex flex-col gap-1 sm:gap-3">
