@@ -1,16 +1,16 @@
-
 import CarouselSilder from "@/components/Carousel/Carousel";
 import CardComponent from "@/components/card";
 import Activies from "@/components/contextContainer/activies";
 import ContextContainer from "@/components/contextContainer/container";
 import Footer from "@/components/footer";
 import Navbar from "@/components/layout/Navbar";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 
 export default function Home() {
-  const t = useTranslations("navbar");
+  const t = useTranslations("activity");
+  const locale = useLocale()
   return (
     <>
       <Navbar />
@@ -23,11 +23,11 @@ export default function Home() {
       <div className="flex flex-col flex-1 gap-5 w-11/12 sm:w-3/4 mx-auto">
         <h1 className="text-base sm:text-2xl font-medium sm:font-semibold text-center">Area of Activity</h1>
         <div className="flex flex-row flex-wrap justify-center sm:justify-between flex-1 gap-2 sm:gap-0">
-          <Activies image={"/assets/education.png"} href={"/"} content={"education"} />
-          <Activies image={"/assets/social-services.png"} href={"/"} content={"social services"} />
-          <Activies image={"/assets/medical-care.png"} href={"/"} content={"health care services"} />
-          <Activies image={"/assets/agriculture.png"} href={"/"} content={"agriculture"} />
-          <Activies image={"/assets/global-warming.png"} href={"/"} content={"global warming"} />
+          <Activies image={"/assets/education.png"} href={`/${locale}/activity/education`} content={"education"} />
+          <Activies image={"/assets/social-services.png"} href={`/${locale}/activity/social`} content={"social services"} />
+          <Activies image={"/assets/medical-care.png"} href={`/${locale}/activity/health`} content={"health care services"} />
+          <Activies image={"/assets/agriculture.png"} href={`/${locale}/activity/agriculture`} content={"agriculture"} />
+          <Activies image={"/assets/global-warming.png"} href={`/${locale}/activity/globalWarming`} content={"global warming"} />
         </div>
         <div className="flex flex-col gap-5">
           <div className="flex justify-center items-center bg-[#3066b2] p-1 sm:p-2 w-11/12 mx-auto">

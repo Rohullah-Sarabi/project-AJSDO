@@ -17,7 +17,7 @@ const IranSans = localFont({src:"/FontsFree-Net-ir_sans.ttf"})
 
 export const metadata = {
   title: "AJSDO",
-  description: "Developed By",
+  description: "Developed By Rohullah Sarabi & Asadullah Ahamdi",
 };
 
 export default async function RootLayout({ children,params:{locale}}) {

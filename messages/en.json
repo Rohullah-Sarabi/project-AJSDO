@@ -1,14 +1,17 @@
 {
     "navbar": {
-        "title":{
-            "abbreuiation":"ajsdo",
-            "name":"Afghanistan Justic and Sustainable Development Organization"
+        "title": {
+            "abbreuiation": "ajsdo",
+            "name": "Afghanistan Justic and Sustainable Development Organization"
         },
         "home": {
             "title": "Home",
             "url": "/en"
         },
-        "program":{"title":"Programs","url":"/en/program"} ,
+        "program": {
+            "title": "Programs",
+            "url": "/en/program"
+        },
         "contact": {
             "title": "Contact",
             "url": "/en/contact"
@@ -83,6 +86,49 @@
             "label": "Your message",
             "placeholder": "Write your thoughts here...",
             "required": "your message is required."
+        }
+    },
+    "activity":{
+        "education":{
+            "title":"EDUCATION",
+            "image":"/assets/educationBanner.png",
+            "1":"Increase access to quality education for underprivileged children and youth.",
+            "2":"Enhance educational infrastructure and resources in marginalized communities.",
+            "3":"Improve literacy rates and promote lifelong learning opportunities for all.",
+            "4":"Conducting vocational training programs to equip individuals with practical skills for employment."
+        },
+        "health":{
+            "title":"HEALT CARE SERVICES",
+            "image":"/assets/medical.jpg",
+            "1":"Provide accessible and affordable healthcare services to deprived people.",
+            "2":"Improve health outcomes by focusing on preventive care, treatment, health and education.",
+            "3":"Collaborate with local healthcare providers and organizations to strengthen healthcare systems.",
+            "4":"Organizing health awareness campaigns and workshops to educate communities about preventive healthcare measures."
+        },
+        "social":{
+            "title":"SOCIAL SERVICES",
+            "image":"/assets/socialServecs.jpg",
+            "1":"Offer comprehensive social services, including livelihood support, shelter, and counseling.",
+            "2":"Promote social inclusion and empower marginalized individuals and communities.",
+            "3":"Facilitate skill development programs and vocational training to enhance livelihood opportunities.",
+            "4":"Implement poverty reduction programs that address the root causes of poverty.",
+            "5":"Foster economic empowerment through income-generating activities and entrepreneurship support."
+        }
+        ,
+        "agriculture":{
+            "title":"AGRICULTURE",
+            "image":"/assets/agriculture.jpg",
+            "1":"Facilitating agricultural training programs to enhance farming techniques, crop diversification, and sustainable agricultural practices.",
+            "2":"Establishing community gardens or agricultural cooperatives to promote self-sufficiency and income generation.",
+            "3":"Providing access to agricultural resources, such as seeds, tools, and irrigation systems, to support local farmers."
+        },
+        "globalWarming":{
+            "title":"GLOBAL WARMING",
+            "image":"/assets/global.jpg",
+            "1":"Raising awareness about climate change and its impact on local communities.",
+            "2":"Promoting sustainable energy practices, such as renewable energy adoption and energy efficiency initiatives.",
+            "3":"Conducting tree plantation drives and environmental cleanup campaigns to mitigate environmental degradation.",
+            "4":"Conducting research on climate change to better understand its local implications and develop targeted mitigation strategies."
         }
     }
 }
