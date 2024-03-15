@@ -6,8 +6,8 @@ function ActivityComponent({ type }) {
     return (
         <>
             <div className="w-full">
-                <p className="font-black text-5xl text-white absolute top-1/2 left-1/3">{t("title")}</p>
-                <Image src={t("image")} width={680} height={453} alt={`type background image`} className="w-full h-52" />
+                <p className="font-black text-3xl sm:text-5xl text-white absolute top-1/4 left-1/4 sm:top-1/2 sm:left-1/3">{t("title")}</p>
+                <Image src={t("image")} width={680} height={453} alt={`type background image`} className="w-full h-32 sm:h-52" />
             </div>
             <div className="w-4/5 sm:w-2/3 m-auto flex flex-col gap-5 justify-center mt-4 sm:p-5">
                 <div className="flex flex-col justify-center gap-5">
