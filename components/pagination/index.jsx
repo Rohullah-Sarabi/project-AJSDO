@@ -1,6 +1,6 @@
 export function Pagination() {
     return (
-        <ul class="inline-flex -space-x-px text-base h-10 rounded-4">
+        <ul class="inline-flex -space-x-px text-base h-10">
             <li>
                 <a href="#" className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">Previous</a>
             </li>
