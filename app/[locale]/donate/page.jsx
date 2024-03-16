@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import { useTranslations } from "next-intl";
 
 function Donate() {
-    const t = useTranslations("about")
+    const t = useTranslations("donate")
     return (
         <>
             <Navbar/>

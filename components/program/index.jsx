@@ -6,16 +6,37 @@ import { useEffect, useState } from "react";
 
 function ProgramContainer({ programs }) {
     const [category, setCategory] = useState("all");
-    let programsInProgress,programsOnPlan,AcomplatedPrograms;
-    useEffect(()=>{
-        const ArrangeData = ()=>{
-            programsInProgress = programs?.map((pro) => {if(pro.projectState == "inprogress")return pro})
-            programsOnPlan = programs?.map((pro) => {if(pro.projectState == "onplan")return pro})
-            AcomplatedPrograms = programs?.map((pro) => { if(pro.projectState == "acomplated") return pro})
-        }
-        ArrangeData()
-    },[])
+    const [filteredPrograms, setFilteredPrograms] = useState([]);
 
+    useEffect(() => {
+        filterPrograms();
+    }, []);
+
+    useEffect(() => {
+        filterPrograms();
+    }, [category]);
+
+    const filterPrograms = () => {
+        let filteredPrograms = [];
+
+        if (category === "all") {
+            filteredPrograms = programs;
+        } else if (category === "progress") {
+            filteredPrograms = programs.filter(
+                (program) => program.projectState === "inprogress"
+            );
+        } else if (category === "acomplated") {
+            filteredPrograms = programs.filter(
+                (program) => program.projectState === "acomplated"
+            );
+        } else if (category === "onplan") {
+            filteredPrograms = programs.filter(
+                (program) => program.projectState === "onplan"
+            );
+        }
+
+        setFilteredPrograms(filteredPrograms);
+    };
     return (
         <div className="flex flex-col p-5 gap-5 justify-center">
             <div className="w-full text-center">
@@ -35,28 +56,22 @@ function ProgramContainer({ programs }) {
                 </div>
             </div>
             <div className="flex flex-row flex-wrap gap-2 justify-center">
-                {
-                    programs.length > 0 ? category == "all" && programs?.map((program, index) =>
+                {filteredPrograms.length > 0 ? (
+                    filteredPrograms.map((program, index) => (
                         <CardComponent program={program} key={index} />
-                    ) : (
-                        <div className="flex flex-col">
-                            <Image src={"/assets/noResults.png"} width={500} height={500} alt="no result image" />
-                        </div>
-                    )
-                }
-                {
-
-                    category == "progress" && programsInProgress?.map((program, index) => <CardComponent program={program} key={index} />)
-
-                }
-                {
-                    category == "acomplated" && AcomplatedPrograms?.map((program, index) => <CardComponent program={program} key={index} />)
-                }
-                {
-
-
-                    category == "onplan" && programsOnPlan?.map((program, index) => <CardComponent program={program} key={index} />)
-                }
+                    ))
+                ) : (
+                    <div className="flex flex-col gap-3 w-1/2 items-center">
+                        <Image
+                            src={"/assets/noResults.png"}
+                            width={500}
+                            height={500}
+                            alt="no result image"
+                            className="w-1/3"
+                        />
+                        <p className="text-lg sm:text-3xl">Empty</p>
+                    </div>
+                )}
             </div>
             <div className="w-full text-center">
                 <Pagination />
@@ -66,10 +81,3 @@ function ProgramContainer({ programs }) {
 }
 
 export default ProgramContainer;
-
-
-// return (
-//     <div className="flex flex-col">
-//         <Image src={"/assets/noResults.png"} width={500} height={500} alt="no result image" />
-//     </div>
-// )
