@@ -223,6 +223,19 @@
         "all programs":"all programs",
         "empty":"no result found"
     },
+    "program":{
+        "back":"back",
+        "projectOwner":"project owner",
+        "projectDuation":"project duation",
+        "implemented": "implemented by",
+        "projectBudget":"project budget",
+        "projectBeneficiaries":"project beneficiaries",
+        "location":"location",
+        "projectType":"project type",
+        "staffs":"staffs",
+        "status":"status",
+        "donate":"donate"
+    },
     "footer":{
         "title":"navigation",
         "home": {

@@ -9,25 +9,28 @@ import { FaMapLocationDot } from 'react-icons/fa6';
 import {BiSolidCategoryAlt} from "react-icons/bi"
 import {RiTeamFill} from "react-icons/ri"
 import {TbStatusChange} from "react-icons/tb"
+import { useTranslations } from 'next-intl';
+import local from 'next/font/local';
 
 function TabComponent({ data }) {
+    const t = useTranslations("program")
     return (
 
-        <Tabs aria-label="Default tabs" style="default">
+        <Tabs aria-label="Default tabs" style="default" className='text-sm sm:text-lg text-[#3c3744]'>
 
-            <Tabs.Item title="Project owner" icon={MdDashboard}>
+            <Tabs.Item title={t("projectOwner")} icon={MdDashboard}>
                 {data.projectOwner}
             </Tabs.Item>
-            <Tabs.Item title="Project duration" icon={GiDuration}>
+            <Tabs.Item title={t("projectDuation")} icon={GiDuration}>
                 {data.ProjectDuration}
             </Tabs.Item>
-            <Tabs.Item title="implemented" icon={GrOrganization}>
+            <Tabs.Item title={t("implemented")} icon={GrOrganization}>
                 {data.ProjectImplemented}
             </Tabs.Item>
-            <Tabs.Item title="Project budget" icon={FaMoneyBill}>
+            <Tabs.Item title={t("projectBudget")} icon={FaMoneyBill}>
                 {data.ProjectBudget}
             </Tabs.Item>
-            <Tabs.Item title="Project beneficiaries" icon={IoIosPeople}>
+            <Tabs.Item title={t("projectBeneficiaries")} icon={IoIosPeople}>
                 {data.ProjectBeneficiaries}
             </Tabs.Item>
         </Tabs>
@@ -35,21 +38,42 @@ function TabComponent({ data }) {
     );
 }
 
-export function Tab({data}){
+export function Tab({data,status,locale}){
+    const t = useTranslations("program")
+    let projectStatus ;
+    if(locale=="en"){
+        projectStatus = status.projectState
+    }else if(locale=="fa"){
+        if(status.projectState=="completed"){
+            projectStatus="تکمیل شده"
+        }else if(status.projectState=="inprogress"){
+            projectStatus="جریان دارد"
+        }else if(status.projectState=="onplan"){
+            projectStatus="پلان شده"
+        }
+    }else{
+        if(status.projectState=="completed"){
+            projectStatus="بشپړ شوی"
+        }else if(status.projectState=="inprogress"){
+            projectStatus="دوران لری"
+        }else if(status.projectState=="onplan"){
+            projectStatus="پلان شوی"
+        }
+    }
     return(
-        <Tabs aria-label="Default tabs" style="default">
+        <Tabs aria-label="Default tabs" style="default" className='text-sm sm:text-lg text-[#3c3744]'>
 
-        <Tabs.Item title="location" icon={FaMapLocationDot}>
+        <Tabs.Item title={t("location")} icon={FaMapLocationDot}>
             {data.location}
         </Tabs.Item>
-        <Tabs.Item title="project type" icon={BiSolidCategoryAlt}>
+        <Tabs.Item title={t("projectType")} icon={BiSolidCategoryAlt}>
             {data.projectType}
         </Tabs.Item>
-        <Tabs.Item title="Staffs" icon={RiTeamFill}>
+        <Tabs.Item title={t("staffs")} icon={RiTeamFill}>
             {data.ProjectStaff}
         </Tabs.Item>
-        <Tabs.Item title="project State" icon={TbStatusChange}>
-            {data.projectState}
+        <Tabs.Item title={t("status")} icon={TbStatusChange}>
+            {projectStatus}
         </Tabs.Item>
     </Tabs>
     )

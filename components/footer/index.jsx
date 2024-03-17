@@ -3,11 +3,12 @@ import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi"
 import { SiGmail } from "react-icons/si"
 import {BsTwitterX} from "react-icons/bs"
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function Footer() {
     const date = new Date()
     const t = useTranslations("footer")
+    const locale = useLocale()
     return (
         <div className="w-full bg-[#3066b2] flex flex-col mt-2 border-t-8 border-white">
                 <div className="w-full flex flex-col sm:flex-row justify-around p-5 text-[#fbfff1] border border-green-600">
@@ -24,11 +25,11 @@ function Footer() {
                     <div className=" text-center sm:text-start p-5">
                         <h1 className="text-base sm:text-lg font-semibold mb-2 uppercase">{t("activity.title")}</h1>
                         <div className="flex flex-col text-base sm:text-lg gap-2 capitalize">
-                            <Link href={"/"} className="capitalize">{t("activity.education")}</Link>
-                            <Link href={"/"} className="capitalize">{t("activity.social")}</Link>
-                            <Link href={"/"} className="capitalize">{t("activity.health")}</Link>
-                            <Link href={"/"} className="capitalize">{t("activity.agriculture")}</Link>
-                            <Link href={"/"} className="capitalize">{t("activity.globalWarming")}</Link>
+                            <Link href={`/${locale}/activity/education`} className="capitalize">{t("activity.education")}</Link>
+                            <Link href={`/${locale}/activity/social`} className="capitalize">{t("activity.social")}</Link>
+                            <Link href={`/${locale}/activity/health`} className="capitalize">{t("activity.health")}</Link>
+                            <Link href={`/${locale}/activity/agriculture`} className="capitalize">{t("activity.agriculture")}</Link>
+                            <Link href={`/${locale}/activity/globalWarming`} className="capitalize">{t("activity.globalWarming")}</Link>
 
                         </div>
                     </div>

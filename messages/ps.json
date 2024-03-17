@@ -219,6 +219,19 @@
         "all programs":"ټول پروګرامونه",
         "empty":"کومې پایلې ونه موندل شوي"
     },
+    "program":{
+        "back":"بیرته",
+        "projectOwner":"د پروژې خاوند",
+        "projectDuation":"د پروژې موده",
+        "implemented": "لخوا چلول",
+        "projectBudget":"د پروژې بودیجه",
+        "projectBeneficiaries":"د پروژې ګټه اخیستونکي",
+        "location":"ځای",
+        "projectType":"د پروژې ډول",
+        "staffs":"پرسنل",
+        "status":"د پروژې حالت",
+        "donate":"اهداء کنید"
+    },
     "footer":{
         "title":"نیویګیشن",
         "home": {

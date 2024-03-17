@@ -222,6 +222,19 @@
         "all programs":"همه برنامه ها",
         "empty":"هیچ نتیجه ای یافت نشد"
     },
+    "program":{
+        "back":"بازگشت",
+        "projectOwner":"صاحب پروژه",
+        "projectDuation":"مدت زمان پروژه",
+        "implemented": "اجرا شده توسط",
+        "projectBudget":"بودجه پروژه",
+        "projectBeneficiaries":"ذینفعان پروژه",
+        "location":"موقعیت",
+        "projectType":"نوع پروژه",
+        "staffs":"پرسنل",
+        "status":"وضعیت بروز پروژه",
+        "donate":"اهداء کنید"
+    },
     "footer":{
         "title":"نیویکیشن",
         "home": {
