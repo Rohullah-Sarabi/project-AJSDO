@@ -158,7 +158,7 @@ const programSchema = new mongoose.Schema({
             values: [
                 "inprogress",
                 "onplan",
-                "acomplated"
+                "completed"
             ],
             message: "Please select correct project type"
         }

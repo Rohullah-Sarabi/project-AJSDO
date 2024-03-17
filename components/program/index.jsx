@@ -1,13 +1,13 @@
 import Image from "next/image";
 import CardComponent from "../card";
-import { Pagination } from "../pagination";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 
 function ProgramContainer({ programs }) {
     const [category, setCategory] = useState("all");
     const [filteredPrograms, setFilteredPrograms] = useState([]);
-
+    const t = useTranslations("programs")
     useEffect(() => {
         filterPrograms();
     }, []);
@@ -22,15 +22,15 @@ function ProgramContainer({ programs }) {
         if (category === "all") {
             filteredPrograms = programs;
         } else if (category === "progress") {
-            filteredPrograms = programs.filter(
+            filteredPrograms = programs?.filter(
                 (program) => program.projectState === "inprogress"
             );
         } else if (category === "acomplated") {
-            filteredPrograms = programs.filter(
-                (program) => program.projectState === "acomplated"
+            filteredPrograms = programs?.filter(
+                (program) => program.projectState === "completed"
             );
         } else if (category === "onplan") {
-            filteredPrograms = programs.filter(
+            filteredPrograms = programs?.filter(
                 (program) => program.projectState === "onplan"
             );
         }
@@ -41,17 +41,17 @@ function ProgramContainer({ programs }) {
         <div className="flex flex-col p-5 gap-5 justify-center">
             <div className="w-full text-center">
                 <div className="inline-flex rounded-md shadow-sm">
-                    <button type="button" onClick={() => setCategory("all")} className="inline-flex items-center px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
-                        All Progrom
+                    <button type="button" onClick={() => setCategory("all")} className={`${category=="all"?"text-blue-700":"text-gray-900"} inline-flex items-center px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}>
+                        {t("all programs")}
                     </button>
-                    <button type="button" onClick={() => setCategory("progress")} className="inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
-                        In Progress
+                    <button type="button" onClick={() => setCategory("progress")} className={`${category=="progress"?"text-blue-700":"text-gray-900"} inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}>
+                        {t("in progress")}
                     </button>
-                    <button type="button" onClick={() => setCategory("acomplated")} className="inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
-                        Acomplated
+                    <button type="button" onClick={() => setCategory("completed")} className={`${category=="completed"?"text-blue-700":"text-gray-900"} inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}>
+                        {t("completed")}
                     </button>
-                    <button type="button" onClick={() => setCategory("onplan")} className="inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ">
-                        on Plan
+                    <button type="button" onClick={() => setCategory("onplan")} className={`${category=="onplan"?"text-blue-700":"text-gray-900"} inline-flex items-center  px-1 py-1 sm:px-4 sm:py-2 text-sm font-light sm:font-medium bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}>
+                        {t("on plan")}
                     </button>
                 </div>
             </div>
@@ -69,12 +69,9 @@ function ProgramContainer({ programs }) {
                             alt="no result image"
                             className="w-1/3"
                         />
-                        <p className="text-lg sm:text-3xl">Empty</p>
+                        <p className="text-lg sm:text-3xl">{t("empty")}</p>
                     </div>
                 )}
-            </div>
-            <div className="w-full text-center">
-                <Pagination />
             </div>
         </div>
     )

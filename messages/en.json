@@ -215,5 +215,50 @@
                 "3":"Continuously improve programmatic interventions based on lessons learned and feedback."
             }
         }
+    },
+    "programs":{
+        "completed":"completed",
+        "on plan":"on plan",
+        "in progress":"in progress",
+        "all programs":"all programs",
+        "empty":"no result found"
+    },
+    "footer":{
+        "title":"navigation",
+        "home": {
+            "title": "Home",
+            "url": "/en"
+        },
+        "program": {
+            "title": "Programs",
+            "url": "/en/program"
+        },
+        "contact": {
+            "title": "Contact",
+            "url": "/en/contact"
+        },
+        "about": {
+            "title": "About Us",
+            "url": "/en/about"
+        },
+        "donate": {
+            "title": "donate",
+            "url": "/en/donate"
+        },
+        "activity":{
+            "title":"Area of interest",
+            "globalWarming":"global warming",
+            "agriculture":"agriculture",
+            "health":"health care services",
+            "social":"social services",
+            "education":"education"
+        },
+        "connect":{
+            "title":"Connect",
+            "address":"14th Street, Behind the Bamyan airport, Bamyan City, Afghanistan",
+            "tel":"tel",
+            "phoneNumber1":"+93(0)779979286",
+            "phoneNumber2":"+93(0)773105552"
+        }
     }
 }

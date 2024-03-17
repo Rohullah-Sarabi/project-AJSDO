@@ -1,48 +1,46 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedin, FaTwitter, FaX } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi"
 import { SiGmail } from "react-icons/si"
+import {BsTwitterX} from "react-icons/bs"
+import { useTranslations } from "next-intl";
 
 function Footer() {
     const date = new Date()
+    const t = useTranslations("footer")
     return (
         <div className="w-full bg-[#3066b2] flex flex-col mt-2 border-t-8 border-white">
-            <div className="flex flex-col sm:flex-row justify-between p-5 gap-10 text-[#fbfff1]">
-                <div className="w-full sm:w-1/3 flex flex-col justify-center items-center gap-1">
-                    <Image src={"/assets/logo.png"} alt={"Afghanistan Justic and Sustainable Development Organization logo"} height={1024} width={1024} className="w-36 sm:w-44 h-36 sm:h-44" />
-                    <p className="text-center text-base sm:text-lg">Afghanistan Justic and Sustainable Development Organization(AJSDO)</p>
-                </div>
-                <div className="w-full flex flex-col sm:flex-row justify-evenly">
-                    <div className=" text-center sm:text-start">
-                        <h1 className="text-base sm:text-lg font-semibold mb-2">Navigation</h1>
-                        <div className="flex flex-col text-base sm:text-lg gap-2">
-                            <Link href={"/"}>Home</Link>
-                            <Link href={"/"}>Programs</Link>
-                            <Link href={"/"}>Contact</Link>
-                            <Link href={"/"}>About</Link>
+                <div className="w-full flex flex-col sm:flex-row justify-around p-5 text-[#fbfff1] border border-green-600">
+                    <div className=" text-center sm:text-start p-5">
+                        <h1 className="text-base sm:text-lg font-semibold mb-2 uppercase">{t("title")}</h1>
+                        <div className="flex flex-col text-base sm:text-lg gap-2 capitalize">
+                            <Link href={t("home.url")}>{t("home.title")}</Link>
+                            <Link href={t("program.url")}>{t("program.title")}</Link>
+                            <Link href={t("donate.url")}>{t("donate.title")}</Link>
+                            <Link href={t("contact.url")}>{t("contact.title")}</Link>
+                            <Link href={t("about.url")}>{t("about.title")}</Link>
                         </div>
                     </div>
-                    <div className=" text-center sm:text-start">
-                        <h1 className="text-base sm:text-lg font-semibold mb-2">Area of Activity</h1>
-                        <div className="flex flex-col text-base sm:text-lg gap-2">
-                            <Link href={"/"} className="capitalize">education</Link>
-                            <Link href={"/"} className="capitalize">social services</Link>
-                            <Link href={"/"} className="capitalize">health care services</Link>
-                            <Link href={"/"} className="capitalize">agriculture</Link>
-                            <Link href={"/"} className="capitalize">global warming</Link>
+                    <div className=" text-center sm:text-start p-5">
+                        <h1 className="text-base sm:text-lg font-semibold mb-2 uppercase">{t("activity.title")}</h1>
+                        <div className="flex flex-col text-base sm:text-lg gap-2 capitalize">
+                            <Link href={"/"} className="capitalize">{t("activity.education")}</Link>
+                            <Link href={"/"} className="capitalize">{t("activity.social")}</Link>
+                            <Link href={"/"} className="capitalize">{t("activity.health")}</Link>
+                            <Link href={"/"} className="capitalize">{t("activity.agriculture")}</Link>
+                            <Link href={"/"} className="capitalize">{t("activity.globalWarming")}</Link>
 
                         </div>
                     </div>
-                    <div className=" text-center sm:text-start">
-                        <h1 className="text-base sm:text-lg font-semibold mb-2">Connect</h1>
-                        <div className="flex flex-col text-base sm:text-lg gap-2">
-                            <address className="text-sm text-wrap">14th  Street, Behind the Bamyan  airport, Bamyan City, Afghanistan</address>
-                            <div className="flex flex-row justify-center sm:justify-start">
-                                <p className="font-semibold">tel:</p> 
-                                <div className="flex flex-row gap-5">
-                                    <Link href={"tel:+93779979286"} className="text-md">+93(0)779979286</Link>
-                                    <Link href={"tel:+93773105552"} className="text-md">+93(0)773105552</Link>
+                    <div className="text-center sm:text-start p-5">
+                        <h1 className="text-base sm:text-lg font-semibold mb-2 uppercase">{t("connect.title")}</h1>
+                        <div className="flex flex-col text-base sm:text-lg gap-3">
+                            <address className="text-sm text-wrap">{t("connect.address")}</address>
+                            <div className="flex flex-col justify-center sm:justify-start">
+                                <p className="font-semibold">{t("connect.tel")}:</p> 
+                                <div className="flex flex-col gap-1">
+                                    <Link href={`tel:${t("connect.phoneNumber1")}`} className="text-md">{t("connect.phoneNumber1")}</Link>
+                                    <Link href={`tel:${t("connect.phoneNumber1")}`} className="text-md">{t("connect.phoneNumber2")}</Link>
                                 </div>
                             </div>
                             <div className="flex flex-row gap-5 sm:justify-start justify-center">
@@ -50,7 +48,7 @@ function Footer() {
                                     <FaFacebookF className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
-                                    <FaX
+                                    <BsTwitterX
                                      className="text-2xl"/>
                                 </Link>
                                 <Link href={""}>
@@ -67,8 +65,6 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-
-            </div>
             <div className="w-full bg-[#30668f] flex flex-col justify-start items-start sm:justify-center sm:items-center px-10 py-2 text-[#fbfff1]">
                 <p className="text-xs sm:text-sm text-justify">©{date.getFullYear().toString()} Afghanistan Justic and Sustainable Development Organization (AJSDO)</p>
                 <p className="text-xs sm:text-sm text-justify">Branding & Web Development by RSAA</p>
