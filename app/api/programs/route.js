@@ -26,6 +26,7 @@ export async function GET(req,res){
         const programsCount = await program.countDocuments()
         return NextResponse.json({programs,programsCount})
     } catch (error) {
+        return NextResponse.json({error})
     }
 }
 

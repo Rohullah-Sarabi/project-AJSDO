@@ -1,11 +1,9 @@
-
-import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 import useTextDirection from "@/context/useTextDirection";
 import { NextIntlClientProvider } from "next-intl";
 import {Roboto} from "next/font/google";
 import localFont from 'next/font/local'
-import Footer from "@/components/footer";
+import GlobalProvider from "./globalContext";
 
 
 const roboto = Roboto({
@@ -32,10 +30,12 @@ export default async function RootLayout({ children,params:{locale}}) {
     notFound();
   }
   return (
-    <html lang={locale} dir={`${direction}`}>
+    <html lang={locale} dir={direction}>
       <body className={`${direction=="rtl"? IranSans.className:roboto.className} bg-[#fbfff1]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <GlobalProvider>
+            {children}
+          </GlobalProvider>
         </NextIntlClientProvider>
         </body>
     </html>

@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 
 
 
-export default async function Home() {
+export default function Home() {
   const [programs, setProgram] = useState(null)
   const t = useTranslations("home")
 
@@ -47,9 +47,16 @@ export default async function Home() {
             <p className="uppercase text-xs sm:text-lg font-medium sm:font-bold text-[#fbfff1]">{t("recentActivity")}</p>
           </div>
           <div className="flex flex-row flex-wrap gap-2 justify-center">
+            
             {
-              programs?.map((program, index) =>
-                <CardComponent program={program} key={index} />
+              Array.isArray(programs) && programs.length > 0 ? (
+                <div className="flex flex-row flex-wrap gap-2 justify-center">
+                  {programs.map((program, index) => (
+                    <CardComponent program={program} key={index} />
+                  ))}
+                </div>
+              ) : (
+                <p>No programs available.</p>
               )
             }
           </div>
