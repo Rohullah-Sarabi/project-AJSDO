@@ -85,7 +85,7 @@
         "message": "If you wish to learn more about our work or become a partner and/or volunteer, please contact @ajsdo.ngo@gmail.com.",
         "name": {
             "label": "First name",
-            "placeholder": "Ali",
+            "placeholder": "example Ali",
             "required": "User Name is required!",
             "roleMessage": "Name must be at least 3 characters long and only contain alphabetic characters and spaces"
         },
@@ -94,6 +94,12 @@
             "placeholder": "Example Sarabi",
             "required": "Last Name is required!",
             "roleMessage": "Last Name must be at least 3 characters long and only contain alphabetic characters and spaces"
+        },
+        "subject":{
+            "label":"Subject",
+            "required":"subject is required",
+            "placeholder":"subject of email",
+            "roleMessage":"subject must be at least 3 characters long."
         },
         "email": {
             "label": "Email Address",
