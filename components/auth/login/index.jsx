@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
-import { parseCallbackUrl } from "@/backend/controller/operation";
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -23,7 +22,6 @@ function Login() {
             password,
             locale ,
             redirect:false
-            // callbackUrl: callbackUrl?parseCallbackUrl(callbackUrl):"/"
         });
 
         if (data?.error) {
