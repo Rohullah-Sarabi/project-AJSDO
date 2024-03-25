@@ -52,9 +52,6 @@ function Footer() {
                                     <BsTwitterX
                                      className="text-2xl"/>
                                 </Link>
-                                <Link href={""}>
-                                    <TfiYoutube className="text-2xl"/>
-                                </Link>
                                 <Link href={"https://www.linkedin.com/company/afghanistan-justice-and-sustainable-development-organization/"}>
                                     <FaLinkedin className="text-2xl"/>
                                 </Link>
@@ -67,7 +64,7 @@ function Footer() {
                     </div>
                 </div>
             <div className="w-full bg-[#30668f] flex flex-col justify-start items-start sm:justify-center sm:items-center px-10 py-2 text-[#fbfff1]">
-                <p className="text-xs sm:text-sm text-justify">©{date.getFullYear().toString()} Afghanistan Justic and Sustainable Development Organization (AJSDO)</p>
+                <p className="text-xs sm:text-sm text-justify">©{date.getFullYear().toString()} Afghanistan Justice and Sustainable Development Organization (AJSDO)</p>
                 <p className="text-xs sm:text-sm text-justify">Branding & Web Development by RSAA</p>
             </div>
         </div>
