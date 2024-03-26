@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi"
 import { SiGmail } from "react-icons/si"
 import {BsTwitterX} from "react-icons/bs"
@@ -48,7 +48,7 @@ function Footer() {
                                 <Link href="https://www.facebook.com/profile.php?id=61556935291565&mibextid=rS40aB7S9Ucbxw6v" >
                                     <FaFacebookF className="text-2xl"/>
                                 </Link>
-                                <Link href={""}>
+                                <Link href={"https://twitter.com/AJSDONgo"}>
                                     <BsTwitterX
                                      className="text-2xl"/>
                                 </Link>
@@ -57,6 +57,9 @@ function Footer() {
                                 </Link>
                                 <Link href={"mailto:ajsdo.ngo@gmail.com"}>
                                     <SiGmail className="text-2xl"/>
+                                </Link>
+                                <Link href={"https://wa.me/93773105552"}>
+                                    <FaWhatsapp className="text-2xl"/>
                                 </Link>
                             </div>
 
