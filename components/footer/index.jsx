@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedin } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi"
 import { SiGmail } from "react-icons/si"
 import {BsTwitterX} from "react-icons/bs"
@@ -48,12 +48,9 @@ function Footer() {
                                 <Link href="https://www.facebook.com/profile.php?id=61556935291565&mibextid=rS40aB7S9Ucbxw6v" >
                                     <FaFacebookF className="text-2xl"/>
                                 </Link>
-                                <Link href={""}>
+                                <Link href={"https://twitter.com/AJSDONgo"}>
                                     <BsTwitterX
                                      className="text-2xl"/>
-                                </Link>
-                                <Link href={""}>
-                                    <TfiYoutube className="text-2xl"/>
                                 </Link>
                                 <Link href={"https://www.linkedin.com/company/afghanistan-justice-and-sustainable-development-organization/"}>
                                     <FaLinkedin className="text-2xl"/>
@@ -61,13 +58,16 @@ function Footer() {
                                 <Link href={"mailto:ajsdo.ngo@gmail.com"}>
                                     <SiGmail className="text-2xl"/>
                                 </Link>
+                                <Link href={"https://wa.me/93773105552"}>
+                                    <FaWhatsapp className="text-2xl"/>
+                                </Link>
                             </div>
 
                         </div>
                     </div>
                 </div>
             <div className="w-full bg-[#30668f] flex flex-col justify-start items-start sm:justify-center sm:items-center px-10 py-2 text-[#fbfff1]">
-                <p className="text-xs sm:text-sm text-justify">©{date.getFullYear().toString()} Afghanistan Justic and Sustainable Development Organization (AJSDO)</p>
+                <p className="text-xs sm:text-sm text-justify">©{date.getFullYear().toString()} Afghanistan Justice and Sustainable Development Organization (AJSDO)</p>
                 <p className="text-xs sm:text-sm text-justify">Branding & Web Development by RSAA</p>
             </div>
         </div>

@@ -17,7 +17,7 @@ export default function Navbar() {
             <div className="flex flex-col w-full mx-auto lg:max-w-7xl sm:px-5 bg-[#f7f9fb]">
                 <div className="flex flex-row px-2 py-1 sm:py-0 sm:px-5 items-center justify-between">
                     <Link href={"/"}>
-                        <div className=" flex items-center justify-center gap-5 text-2xl text-black font-bold" title="Afghanistan Justic and Sustainable Development Organization">
+                        <div className=" flex items-center justify-center gap-5 text-2xl text-black font-bold" title="Afghanistan Justice and Sustainable Development Organization">
                             <Image
                                 alt={"logo"}
                                 src={Logo}
@@ -28,7 +28,7 @@ export default function Navbar() {
                             <div className="h-14 sm:h-28 bg-[#7ea7db] w-[1px] sm:w-[2px] rounded-full" />
                             <div className="flex flex-col gap-1 sm:gap-3">
                                 <p className="text-lg sm:text-4xl uppercase">{t("title.abbreuiation")}</p>
-                                <p title="Afghanistan Justic and Sustainable Development Organization" className="text-xs sm:text-lg">{t("title.name")}</p>
+                                <p title="Afghanistan Justice and Sustainable Development Organization" className="text-xs sm:text-lg">{t("title.name")}</p>
                             </div>
                         </div>
                     </Link>

@@ -9,6 +9,7 @@ function CarouselSilder() {
                 <Image src="/assets/IMG-20231106-WA0015.jpg" alt="carousel images" width={1500} height={1500} />
 
                 <Image src="/assets/IMG-20231106-WA0016.jpg" alt="carousel images" width={1500} height={1500} />
+                
             </Carousel>
         </div>
     )
