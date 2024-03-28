@@ -42,7 +42,8 @@
             "social":"social services",
             "education":"education"
         },
-        "recentActivity":"recent Activities"
+        "recentActivity":"recent Activities",
+        "allprograms":"All Programs"
     },
     "donate": {
         "about": "Afghanistan Justice and Sustainable Development Organization (AJSDO) as a social, non-governmental and non-profit organization regardless of political ethnic, racial, positional affiliations, provides voluntary and humanitarian services to the needy people of the society. AJSDO is an afghan local and licensed NGO registered by (5575) registration number in ministry of Economic in 2022.",
@@ -240,7 +241,7 @@
         "projectType":"project type",
         "staffs":"staffs",
         "status":"status",
-        "donate":"donate"
+        "donate":"donate now"
     },
     "footer":{
         "title":"navigation",

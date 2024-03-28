@@ -22,11 +22,13 @@ export async function POST(req, res) {
 export async function GET(req,res){
     try {
         dbConnect();
-        const programs = await program.find().sort({ createdAt: -1 });
+        const programs = await program.find({post:true}).sort({ createdAt: -1 });
         const programsCount = await program.countDocuments()
         return NextResponse.json({programs,programsCount})
     } catch (error) {
         return NextResponse.json({error})
     }
 }
+
+
 

@@ -21,14 +21,19 @@ const Register = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         registerUser({ name, email, password })
+        if(user){
+            setName("")
+            setEmail("")
+            setPassword("")
+        }
     }
     return (
         <div
             style={{ maxWidth: "480px" }}
-            className="mt-10 mb-20 p-4 md:p-7 mx-auto rounded bg-white shadow-lg"
+            className="mt-10 mb-20 p-4 sm:p-7 mx-auto rounded bg-white shadow-lg"
         >
             <form onSubmit={submitHandler}>
-                <h2 className="mb-5 text-2xl font-semibold">Register Account</h2>
+                <h2 className="mb-5 text-lg sm:text-2xl font-semibold flex justify-center">Register Account</h2>
 
                 <div className="mb-4">
                     <label className="block mb-1"> Full Name </label>

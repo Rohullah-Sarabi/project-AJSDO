@@ -28,19 +28,16 @@ const programSchema = new mongoose.Schema({
                 message: "Please select correct project type"
             }
         },
-        ProjectDuration: {
+        projectDuration: {
             type: String
         },
-        ProjectBudget: {
+        projectBudget: {
             type: String
         },
-        ProjectStaff: {
+        projectStaff: {
             type: String
         },
-        ProjectImplemented: {
-            type: String
-        },
-        ProjectBeneficiaries: {
+        projectBeneficiaries: {
             type: String
         },
         summary: [
@@ -78,19 +75,16 @@ const programSchema = new mongoose.Schema({
                 message: ""
             }
         },
-        ProjectDuration: {
+        projectDuration: {
             type: String
         },
-        ProjectBudget: {
+        projectBudget: {
             type: String
         },
-        ProjectStaff: {
+        projectStaff: {
             type: String
         },
-        ProjectImplemented: {
-            type: String
-        },
-        ProjectBeneficiaries: {
+        projectBeneficiaries: {
             type: String
         },
         summary: [
@@ -128,19 +122,16 @@ const programSchema = new mongoose.Schema({
                 message: ""
             }
         },
-        ProjectDuration: {
+        projectDuration: {
             type: String
         },
-        ProjectBudget: {
+        projectBudget: {
             type: String
         },
-        ProjectStaff: {
+        projectStaff: {
             type: String
         },
-        ProjectImplemented: {
-            type: String
-        },
-        ProjectBeneficiaries: {
+        projectBeneficiaries: {
             type: String
         },
         summary: [
@@ -150,6 +141,9 @@ const programSchema = new mongoose.Schema({
                 }
             }
         ]
+    },
+    projectImplemented: {
+        type: String
     },
     projectState:{
         type:String,
@@ -162,6 +156,10 @@ const programSchema = new mongoose.Schema({
             ],
             message: "Please select correct project type"
         }
+    },
+    post:{
+        type:Boolean,
+        default:false
     },
     images: [
         {

@@ -45,8 +45,11 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
+                <div className={`${!navbar ? "block bg-[#f7f9fb]" : "hidden"} w-full flex justify-center`}>
+                    <hr className="w-1/2 rounded-lg" />
+                </div>
                 <ul
-                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} z-50 sm:flex flex-col sm:flex-row-reverse text-lg gap-5 items-center justify-center sm:justify-start`}
+                    className={`${navbar ? "block bg-[#f7f9fb]" : "hidden"} z-50 sm:flex flex-col sm:flex-row text-lg gap-4 items-center justify-center sm:justify-center`}
                 >
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={t("home.url")} className="grow p-2 justify-center">
@@ -54,16 +57,16 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className="border-t sm:border-none text-center w-full sm:w-fit hover:text-blue-500 border">
-                        <Link href={t("program.url")} className="grow p-2 justify-center capitalize">{t('program.title')}</Link>
+                        <Link href={t("program.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('program.title')}</Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={t("contact.url")} className="grow p-2 justify-center capitalize">{t('contact.title')}</Link>
+                        <Link href={t("contact.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('contact.title')}</Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={t("about.url")} className="grow p-2 justify-center capitalize">{t('about.title')} </Link>
+                        <Link href={t("about.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('about.title')} </Link>
                     </li>
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
-                        <Link href={t("donate.url")} className="grow p-2 justify-center capitalize">{t('donate.title')}</Link>
+                        <Link href={t("donate.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('donate.title')}</Link>
                     </li>
                     <li className="border-t border sm:border-none flex justify-center w-full sm:w-fit text-center min-w-fit hover:text-blue-500">
                         <LanguageChange />

@@ -1,5 +1,5 @@
 'use client';
-import { Avatar, Dropdown, Navbar } from 'flowbite-react';
+import { Dropdown, Navbar } from 'flowbite-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { signOut, useSession } from 'next-auth/react';
@@ -8,7 +8,7 @@ import AuthContext from '@/context/authContext';
 
 
 
-export function NavbarDashboard() {
+export function NavbarDashboard({state,changeState}) {
     const t = useTranslations("navbar")
     
     const {data} = useSession()
@@ -42,9 +42,10 @@ export function NavbarDashboard() {
             <Dropdown.Header>
               <span className="block truncate text-sm font-medium">{user?.email}</span>
             </Dropdown.Header>
-            <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Item>Settings</Dropdown.Item>
-            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item onClick={()=>changeState("events")}>Events</Dropdown.Item>
+            <Dropdown.Item onClick={()=>changeState("postEvent")}>Post Event</Dropdown.Item>
+            <Dropdown.Item onClick={()=>changeState("setting")}>Settings</Dropdown.Item>
+            <Dropdown.Item onClick={()=>changeState("register")} >Register</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item onClick={logoutHandler}>Sign out</Dropdown.Item>
           </Dropdown>

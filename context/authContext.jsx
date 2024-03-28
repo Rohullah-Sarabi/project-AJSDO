@@ -5,15 +5,14 @@ import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation"
 import { useState } from "react";
 import { createContext } from "react"
+import { toast } from "react-toastify";
 
 const AuthContext = createContext();
 
 export const AuthProvider =({children})=>{
     const [user,setUser] = useState(null)
     const [error,setError] = useState(null)
-    const locale = useLocale()
-
-    const router = useRouter();
+  
 
     const registerUser = async ({name,email,password})=>{
         try {
@@ -22,7 +21,7 @@ export const AuthProvider =({children})=>{
             })
 
             if(data?.user){
-                router.push(`/${locale}/dashboard`)
+                toast.success("user registered successfully!")
             }
         } catch (error) {
             setError(error?.response?.data?.message)

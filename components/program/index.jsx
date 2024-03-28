@@ -25,7 +25,7 @@ function ProgramContainer({ programs }) {
             filteredPrograms = programs?.filter(
                 (program) => program.projectState === "inprogress"
             );
-        } else if (category === "acomplated") {
+        } else if (category === "completed") {
             filteredPrograms = programs?.filter(
                 (program) => program.projectState === "completed"
             );

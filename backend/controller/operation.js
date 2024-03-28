@@ -17,3 +17,13 @@ export const getProgram = async(id)=>{
         return error.message
     }
 }
+
+
+export const getLimitPrograms = async ()=>{
+    try {
+        const { data } = await axios.get(`${process.env.API_URL}/api/programs/limit`)
+        return data.programs;
+    } catch (error) {
+        return error.message;
+    }
+}

@@ -14,17 +14,18 @@ export async function POST(request) {
 
     try {
         const mail = await transporter.sendMail({
-            from: process.env.SMTP_EMAIL,
+            from:`"${data.name}" <${process.env.SMTP_EMAIL}>`,
             to: process.env.SMTP_EMAIL,
             replyTo: data.email,
             subject: data.subject,
             html: `
-            <p>Name: ${data.name} </p>
-            <p>Email: ${data.email} </p>
-            <p>${data.message} </p>
+            <div className="m-5 p-5 flex justify-center items-center">
+                <p className="text-lg font-semibold">Name: ${data.name} </p>
+                <p>Email: ${data.email} </p>
+                <p className="text-lg font-normal">${data.message} </p>
+            </div>
             `
         })
-        console.log("mail:", mail)
         return NextResponse.json({ message: "Success: email was sent", status: 200 })
     } catch (error) {
         NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })

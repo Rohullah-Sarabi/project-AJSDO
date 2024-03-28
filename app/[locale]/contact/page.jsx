@@ -33,8 +33,8 @@ function ContantPage() {
     return (
         <>
             <Navbar />
-            <div className="flex sm:flex-row flex-col h-fit sm:h-screen w-11/12 mx-auto pt-5">
-                <div className="flex flex-col gap-1 sm:gap-3 w-full sm:w-1/2 mx-3 sm:mx-0">
+            <div className="flex sm:flex-row flex-col h-fit sm:min-h-screen w-11/12 mx-auto">
+                <div className="flex flex-col p-5 sm:mt-24  gap-1 sm:gap-3 w-full sm:w-1/2 mx-3 sm:mx-0">
                     <Paragraph style={"text-base sm:text-2xl font-bold capitalize"} content={t('contact')} />
                     <Paragraph style={"text-sm sm:text-lg font-normal justify-start"} content={t('message')} />
                 </div>
@@ -66,6 +66,7 @@ function ContantPage() {
                         </div>
                         <InputComponent label={t("subject.label")} name={"subject"}
                             role={{
+                                required: t("email.required"),
                                 pattern: {
                                     value: locale == "en" ? /^[\w\s!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]+$/u : /^[\w\s!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~\u0600-\u06FF]+$/u,
                                     message: t("subject.roleMessage")
