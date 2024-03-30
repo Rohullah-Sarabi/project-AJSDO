@@ -6,16 +6,34 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/layout/Navbar";
 import { useTranslations } from "next-intl";
 import { Events } from "@/components/Events/events";
+import { useEffect, useState } from "react";
+import { getImages } from "@/backend/controller/operation";
+import Loading from "./loading";
 
 
 
 export default function Home() {
   const t = useTranslations("home")
+
+  const [data, setData] = useState([])
+
+
+  useEffect(() => {
+    const getdata = async () => {
+      const data = await getImages();
+      setData(data)
+    }
+    getdata()
+  }, [data])
+
   return (
     <>
       <Navbar />
       <div className="w-full">
-        <CarouselSilder />
+        {
+          data?.length > 0 ?
+            <CarouselSilder data={data} /> : <Loading />
+        }
       </div>
       <div className="w-2/3 m-auto flex flex-col gap-5 justify-center mt-4 sm:p-5">
         <ContextContainer />

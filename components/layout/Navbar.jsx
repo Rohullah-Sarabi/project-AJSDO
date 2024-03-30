@@ -7,11 +7,13 @@ import { FaXmark } from "react-icons/fa6";
 import { useState } from "react";
 import LanguageChange from "./lang";
 import { useTranslations } from "next-intl";
+import { useSession } from "next-auth/react";
 
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const t = useTranslations("navbar")
+    const { data } = useSession()
     return (
         <nav className="w-full h-20 sm:h-[210px] bg-[#f7f9fb] shadow-md">
             <div className="flex flex-col w-full mx-auto lg:max-w-7xl sm:px-5 bg-[#f7f9fb]">
@@ -45,7 +47,7 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-                <div className={`${!navbar ? "block bg-[#f7f9fb]" : "hidden"} w-full flex justify-center`}>
+                <div className={`bg-[#f7f9fb] hidden w-full sm:flex justify-center`}>
                     <hr className="w-1/2 rounded-lg" />
                 </div>
                 <ul
@@ -68,6 +70,13 @@ export default function Navbar() {
                     <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
                         <Link href={t("donate.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('donate.title')}</Link>
                     </li>
+                    {
+                        data?.user && (
+                            <li className="border-t sm:border-none w-full sm:w-fit flex text-center hover:text-blue-500">
+                                <Link href={t("dashboard.url")} prefetch={false} className="grow p-2 justify-center capitalize">{t('dashboard.title')}</Link>
+                            </li>
+                        )
+                    }
                     <li className="border-t border sm:border-none flex justify-center w-full sm:w-fit text-center min-w-fit hover:text-blue-500">
                         <LanguageChange />
                     </li>

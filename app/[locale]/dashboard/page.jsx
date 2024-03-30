@@ -3,13 +3,14 @@ import { EditeEvents } from "@/components/Events/events";
 import { Paragraph } from "@/components/ParagraphContainer/PContainer";
 import Register from "@/components/auth/register";
 import Footer from "@/components/footer";
-import { PasswordChange } from "@/components/passwordChange";
 import LanguageForm from "@/components/posting/post";
+import { Setting } from "@/components/setting";
 import { NavbarDashboard } from "@/components/sidebar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function DashboardPage() {
     const [menu, setMenu] = useState("events")
+    
     const handleState = (value) => {
         setMenu(value)
     }
@@ -34,7 +35,7 @@ function DashboardPage() {
                     menu == "postEvent" && <LanguageForm />
                 }
                 {
-                    menu=="setting" && <PasswordChange/>
+                    menu=="setting" && <Setting/>
                 }
             </div>
             <Footer />

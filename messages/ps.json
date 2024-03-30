@@ -20,6 +20,10 @@
         "donate": {
             "title":  "مرسته",
             "url": "/ps/donate"
+        },
+        "dashboard":{
+            "title":"ډشبورډ",
+            "url":"/ps/dashboard"
         }
     },
     "home":{

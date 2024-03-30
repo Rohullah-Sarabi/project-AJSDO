@@ -23,6 +23,10 @@
         "donate": {
             "title": "اهدا کند",
             "url": "/fa/donate"
+        },
+        "dashboard":{
+            "title":"داشبورد",
+            "url":"/fa/dashboard"
         }
     },
     "home":{

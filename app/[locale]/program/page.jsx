@@ -19,7 +19,7 @@ function ProgramPage() {
             }
         }
         fetchProgram();
-    }, [])
+    }, [programs])
     if (programs == null) {
         return <Loading />
     }

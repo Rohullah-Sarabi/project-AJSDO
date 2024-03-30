@@ -27,3 +27,13 @@ export const getLimitPrograms = async ()=>{
         return error.message;
     }
 }
+
+
+export const getImages = async ()=>{
+    try {
+        const {data} = await axios.get(`${process.env.API_URL}/api/silderImages`)
+        return data.images;
+    } catch (error) {
+        return error.message;
+    }
+}

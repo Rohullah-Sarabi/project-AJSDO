@@ -26,32 +26,26 @@ export async function POST(req, res) {
 
 }
 
+// change user password
 export async function PUT(req, res) {
     const data = await req.json();
 
     try {
         dbConnect();
         const existUser = await user.findOne({ email: data.email }).select("+password")
-        console.log("existuser:",existUser)
         if (existUser._id) {
             const passwordMatch = await bcrypt.compare(data.currentPassword, existUser.password)
-            console.log("password check:",passwordMatch)
             if (passwordMatch) {
                 existUser.password = data.newPassword;
-                console.log("password check:",existUser)
                 await existUser.save();
-                console.log("password change Save",existUser)
                 return NextResponse.json({ response: "password change successfully!", status: 200 })
             } else {
-                console.log("password not match")
                 return NextResponse.json({ response: "current password does not match with origin password!", status: 400 })
             }
         } else {
-            console.log("else exL")
             return NextResponse.json({ response: "There is not register any user with this email!", status: 400 })
         }
     } catch (error) {
-        console.log(error.message)
         return NextResponse.json({ response: error.message, status: 400 })
     }
 }

@@ -14,21 +14,21 @@ export function PasswordChange() {
         formState: { errors },
         reset
     } = useForm()
-    const {data} = useSession()
+    const { data } = useSession()
 
     const submitHandler = async (info) => {
         info.email = data?.user?.email
-        if(info.newPassword!=info.reEnterNewPassword){
+        if (info.newPassword != info.reEnterNewPassword) {
             toast.error("new password do not match with re-enter password")
             return;
         }
 
         try {
-            const {data} = await axios.put(`${process.env.API_URL}/api/forgetPassword`,info)
-            if(data.status==400){
+            const { data } = await axios.put(`${process.env.API_URL}/api/forgetPassword`, info)
+            if (data.status == 400) {
                 toast.error(data.response)
-            }        
-            if(data.status==200){
+            }
+            if (data.status == 200) {
                 toast.success(data.response)
                 reset()
             }
@@ -38,31 +38,26 @@ export function PasswordChange() {
     }
 
     return (
-        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="flex min-h-full flex-1 flex-col justify-center p-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img
-                    className="mx-auto w-20 "
-                    src={"/assets/logo.png"}
-                    alt="AJSDO logo"
-                />
-                <Paragraph style="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                <Paragraph style="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                     Change Password
                 </Paragraph>
             </div>
 
-            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form
                     onSubmit={handleSubmit(submitHandler)}
-                    className="w-full space-y-6">
+                    className="w-full space-y-3">
                     <div className={"w-full"}>
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current Password</label>
                         <input {...register("currentPassword", {
                             required: "current password is required."
 
                         })}
-                        type='password'
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        placeholder="Enter current password"    
+                            type='password'
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            placeholder="Enter current password"
                         />
                         {errors["currentPassword"] && <span className="text-red-500 text-sm">{errors["currentPassword"].message}</span>}
 
@@ -76,9 +71,9 @@ export function PasswordChange() {
                                 message: "Invalid password. Your password must meet the following criteria:At least one uppercase letter,lowercase,digit, and special character."
                             }
                         })}
-                        type='password'
-                        placeholder="Enter new password"    
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                            type='password'
+                            placeholder="Enter new password"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
                         {errors["newPassword"] && <span className="text-red-500 text-sm">{errors["newPassword"].message}</span>}
 
                     </div>
@@ -86,10 +81,10 @@ export function PasswordChange() {
                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Re-enter New Password</label>
                         <input
                             type='password'
-                            placeholder="Re-enter new password"    
+                            placeholder="Re-enter new password"
                             {...register("reEnterNewPassword", {
                                 required: "this field is required.",
-                                pattern:{
+                                pattern: {
 
                                     value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}$/,
                                     message: "Invalid password. Your password must meet the following criteria:At least one uppercase letter,lowercase,digit, and special character."
@@ -100,7 +95,7 @@ export function PasswordChange() {
                     </div>
                     <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="flex w-full justify-center rounded-md bg-[#3066b2] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                         Change
                     </button>

@@ -23,6 +23,10 @@
         "donate": {
             "title": "donate",
             "url": "/en/donate"
+        },
+        "dashboard":{
+            "title":"dashboard",
+            "url":"/en/dashboard"
         }
     },
     "home":{
