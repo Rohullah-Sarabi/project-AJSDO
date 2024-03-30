@@ -4,7 +4,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs"
 
-async function auth(req, res,locale) {
+async function auth(req, res, locale) {
     return await NextAuth(req, res, {
         session: { strategy: "jwt" }, providers: [
             CredentialsProvider({
@@ -29,21 +29,21 @@ async function auth(req, res,locale) {
                 }
             })
         ],
-        callbacks:{
-            jwt:async({token,user})=>{
+        callbacks: {
+            jwt: async ({ token, user }) => {
                 user && (token.user = user)
                 return token;
             },
-            session:async({session,token})=>{
+            session: async ({ session, token }) => {
                 session.user = token.user;
                 delete session?.user?.password;
                 return session;
             }
         },
-        pages:{
-            signIn:`/${locale}/login`
+        pages: {
+            signIn: `/${locale}/login`
         },
-        secret:process.env.NEXTAUTH_SECRET
+        secret: process.env.NEXTAUTH_SECRET
     })
 }
 

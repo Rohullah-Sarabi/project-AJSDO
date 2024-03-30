@@ -16,6 +16,7 @@ const nextConfig = {
         DELETE_IMAGE_LINK:`C:/Users/Sarabi/Desktop/projects/afghanistan-justic-and-sustainable-development-organization/public`,
         // address to store in database when host it must be added in images.domains inder this code to be loadable.
         IMAGE_FILE: "/images",
+        NEXTAUTH_URL:"http:localhost:3000",
         NEXTAUTH_SECRET: "AJSDO",
         SMTP_PASSWORD: "bazs mcau cupe efvh",
         SMTP_EMAIL: "ajsdo.ngo@gmail.com"

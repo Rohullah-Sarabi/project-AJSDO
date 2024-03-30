@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     email:{
         type:String,
         required:[true,"Please enter your email"],
-        unique:true
+        unique:true,
     },
     password:{
         type:String,
@@ -18,9 +18,13 @@ const userSchema = new mongoose.Schema({
         minLength:[8,"Your password must be longer than 8 characters"],
         select:false
     },
-    role:{
+    resetToken:{
         type:String,
-        default:"user"
+        required:false
+    },
+    resetTokenExpiry:{
+        type:Date,
+        required:false
     },
     createdAt:{
         type:Date,

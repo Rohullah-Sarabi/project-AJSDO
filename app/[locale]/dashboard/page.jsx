@@ -3,6 +3,7 @@ import { EditeEvents } from "@/components/Events/events";
 import { Paragraph } from "@/components/ParagraphContainer/PContainer";
 import Register from "@/components/auth/register";
 import Footer from "@/components/footer";
+import { PasswordChange } from "@/components/passwordChange";
 import LanguageForm from "@/components/posting/post";
 import { NavbarDashboard } from "@/components/sidebar";
 import { useState } from "react";
@@ -31,6 +32,9 @@ function DashboardPage() {
                 }
                 {
                     menu == "postEvent" && <LanguageForm />
+                }
+                {
+                    menu=="setting" && <PasswordChange/>
                 }
             </div>
             <Footer />
