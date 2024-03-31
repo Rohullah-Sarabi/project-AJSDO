@@ -160,13 +160,13 @@ export function FinalContent() {
             <div className="flex flex-row gap-4 w-full">
                 <InputComponent label={"Project Beneficiaries"} name={"en.projectBeneficiaries"}
                     role={{
-                        required: "project Duration is required",
-                    }} divStyle={"w-full"} placeholder={"please enter project Duration"} type={"text"}
+                        required: "project Beneficiaries is required",
+                    }} divStyle={"w-full"} placeholder={"please enter project Beneficiaries"} type={"text"}
                 />
                 <InputComponent label={"ذینفعان پروژه"} name={"fa.projectBeneficiaries"}
                     role={{
-                        required: "مدت زمان پروژه مورد نیاز است",
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفا مدت زمان پروژه را وارد کنید"} type={"text"}
+                        required: "ذینفعان پروژه مورد نیاز است",
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفا ذینفعان پروژه را وارد کنید"} type={"text"}
                 />
                 <InputComponent label={"د پروژې ګټه اخیستونکي"} name={"ps.projectBeneficiaries"}
                     role={{
