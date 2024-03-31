@@ -24,7 +24,7 @@ function UpdateDetails({ params }) {
             }
         }
         fetchProgram(params.id);
-    }, [refresh])
+    }, [refresh,params.id])
      const Refresh = ()=>{
         setRefresh(!refresh)
      }

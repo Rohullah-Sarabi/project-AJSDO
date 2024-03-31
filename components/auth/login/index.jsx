@@ -7,6 +7,7 @@ import { useSearchParams } from "next/router";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -37,10 +38,12 @@ function Login() {
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img
+                <Image
                     className="mx-auto w-20 "
                     src={"/assets/logo.png"}
                     alt="AJSDO logo"
+                    width={50}
+                    height={50}
                 />
                 <Paragraph style="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                     Sign in to your account

@@ -4,11 +4,14 @@ import CarouselSilder from "@/components/Carousel/Carousel";
 import ContextContainer from "@/components/contextContainer/container";
 import Footer from "@/components/footer";
 import Navbar from "@/components/layout/Navbar";
-import { useTranslations } from "next-intl";
-import { Events } from "@/components/Events/events";
+import { useLocale, useTranslations } from "next-intl";
+
 import { useEffect, useState } from "react";
-import { getImages } from "@/backend/controller/operation";
+import { getImages, getLimitPrograms } from "@/backend/controller/operation";
 import Loading from "./loading";
+import CardComponent from "@/components/card";
+import Link from "next/link";
+import { toast } from "react-toastify";
 
 
 
@@ -25,6 +28,21 @@ export default function Home() {
     }
     getdata()
   }, [data])
+
+  const [programs, setProgram] = useState(null)
+  const locale = useLocale()
+
+  useEffect(() => {
+    const fetchProgram = async () => {
+      try {
+        const fetchedPrograms = await getLimitPrograms();
+        setProgram(fetchedPrograms);
+      } catch (error) {
+        toast.error(error.message);
+      }
+    }
+    fetchProgram();
+  }, [programs]);
 
   return (
     <>
@@ -45,7 +63,28 @@ export default function Home() {
           <div className="flex justify-center items-center bg-[#3066b2] p-1 sm:p-2 w-3/4 rounded-md mx-auto">
             <p className="uppercase text-xs sm:text-lg font-medium sm:font-bold text-[#fbfff1]">{t("recentActivity")}</p>
           </div>
-          <Events />
+          {/* <Events /> */}
+          <div className="flex flex-row flex-wrap gap-2 justify-center">
+
+            {
+              Array.isArray(programs) && programs.length > 0 ? (
+
+                <div className="flex flex-row flex-wrap gap-2 justify-center">
+                  {programs.map((program, index) => (
+                    <CardComponent program={program} key={index} />
+                  ))}
+                </div>
+
+              ) : (
+                <p>No programs available.</p>
+              )
+            }
+            {
+              Array.isArray(programs) && programs.length > 0 && <div className="w-full text-blue-700 text-sm sm:text-lg flex justify-center items-center">
+                <Link href={`${process.env.API_URL}/${locale}/program`}>{t("allprograms")}</Link>
+              </div>
+            }
+          </div>
         </div>
       </div>
       <Footer />

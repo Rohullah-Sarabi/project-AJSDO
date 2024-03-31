@@ -19,9 +19,9 @@ function DashboardPage() {
             <NavbarDashboard state={menu} changeState={handleState} />
             <section className="py-5 sm:py-7 bg-blue-100">
                 <div className="container max-w-screen-xl mx-auto px-4 flex flex-row gap-3">
-                    <Paragraph style={"text-bold text-2xl"} content={"Dashboard"} />
-                    <Paragraph style={"text-bold text-2xl"} content={"/"} />
-                    <Paragraph style={"text-bold text-2xl capitalize"} content={menu} />
+                    <Paragraph style={"text-bold text-normal sm:text-2xl"} content={"Dashboard"} />
+                    <Paragraph style={"text-bold text-normal sm:text-2xl"} content={"/"} />
+                    <Paragraph style={"text-bold text-normal sm:text-2xl capitalize"} content={menu} />
                 </div>
             </section>
             <div className="">

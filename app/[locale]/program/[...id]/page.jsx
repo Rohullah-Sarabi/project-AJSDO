@@ -21,7 +21,7 @@ function NewsDetails({ params }) {
             }
         }
         fetchProgram(params.id);
-    }, [])
+    }, [params.id])
 
     return (
         <>

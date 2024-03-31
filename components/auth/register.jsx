@@ -17,7 +17,7 @@ const Register = () => {
             toast.error(error.message)
             clearErrors()
         }
-    }, [error])
+    }, [error,clearErrors])
 
     const submitHandler = async(e) => {
         e.preventDefault();

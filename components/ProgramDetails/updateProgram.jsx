@@ -56,7 +56,8 @@ export function UpdateProgramDetails({ data, allPrograms, refresh, Refresh }) {
             {
                 data[locale]?.summary.map((content, index) => (
                     <div key={index}>
-                        <Image key={index + 1} src={data?.images ? data.images[index].url : "/assets/3.jpg"} width={500} height={500} className="w-full sm:h-auto" />
+                        <Image key={index + 1} src={data?.images ? data.images[index].url : "/assets/3.jpg"} alt={content?.name+" image"}
+                         width={500} height={500} className="w-full sm:h-auto" />
                         <Paragraph style={"text-sm sm:text-lg text-[#3c3744] text-justify p-2 w-full"}>
                             {content.content}
                         </Paragraph>

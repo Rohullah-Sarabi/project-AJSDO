@@ -19,7 +19,7 @@ export function NavbarDashboard({state,changeState}) {
         if(data){
             setUser(data?.user)
         }
-    },[data])
+    },[data,setUser])
 
 
     const logoutHandler = ()=>{

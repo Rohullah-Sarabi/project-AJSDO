@@ -42,7 +42,7 @@ export default function ContextPage({ params }) {
         if (state?.modifiedCount) {
             route.push(`${process.env.API_URL}/${locale}/dashboard`)
         }
-    }, [route, state])
+    }, [route, state,locale])
     const [paragraphNumber, setParagraphNumber] = useState(1)
 
     const handleAddParagraph = () => {

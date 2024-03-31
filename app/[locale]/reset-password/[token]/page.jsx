@@ -7,6 +7,7 @@ import { useLocale } from "next-intl";
 import Loading from "@/app/[locale]/loading";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 function ResetPassword({ params }) {
 
@@ -75,10 +76,12 @@ function ResetPassword({ params }) {
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img
+                <Image
                     className="mx-auto w-20 "
                     src={"/assets/logo.png"}
                     alt="AJSDO logo"
+                    width={50}
+                    height={50}
                 />
                 <Paragraph style="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                     Reset Password

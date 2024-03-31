@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CardComponent, { EditCardComponent } from "../card";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { toast } from "react-toastify";
 
 export function Events() {
     const [programs, setProgram] = useState(null)
@@ -16,11 +17,11 @@ export function Events() {
                 const fetchedPrograms = await getLimitPrograms();
                 setProgram(fetchedPrograms);
             } catch (error) {
-                console.error('Failed to fetch programs:', error);
+                toast.error(error.message);
             }
         }
         fetchProgram();
-    }, []);
+    }, [programs]);
 
     if (programs === null) {
         return <Loading />
@@ -59,7 +60,7 @@ export function EditeEvents() {
                 const fetchedPrograms = await getPrograms();
                 setProgram(fetchedPrograms);
             } catch (error) {
-                console.error('Failed to fetch programs:', error);
+                toast.error(error)
             }
         }
         fetchProgram();

@@ -1,15 +1,11 @@
 import "./globals.css";
 import useTextDirection from "@/context/useTextDirection";
 import { NextIntlClientProvider } from "next-intl";
-import {Roboto} from "next/font/google";
 import localFont from 'next/font/local'
 import GlobalProvider from "./globalContext";
 
 
-const roboto = Roboto({
-  subsets:['latin'],
-  weight:["100", "300", "400", "500", "700", "900"]
-})
+const roboto = localFont({src:"/Roboto-Regular.ttf"})
 
 const IranSans = localFont({src:"/FontsFree-Net-ir_sans.ttf"})
 

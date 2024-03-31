@@ -9,34 +9,31 @@ function ProgramContainer({ programs }) {
     const [filteredPrograms, setFilteredPrograms] = useState([]);
     const t = useTranslations("programs")
     useEffect(() => {
+        const filterPrograms = () => {
+            let filteredPrograms = [];
+    
+            if (category === "all") {
+                filteredPrograms = programs;
+            } else if (category === "progress") {
+                filteredPrograms = programs?.filter(
+                    (program) => program.projectState === "inprogress"
+                );
+            } else if (category === "completed") {
+                filteredPrograms = programs?.filter(
+                    (program) => program.projectState === "completed"
+                );
+            } else if (category === "onplan") {
+                filteredPrograms = programs?.filter(
+                    (program) => program.projectState === "onplan"
+                );
+            }
+    
+            setFilteredPrograms(filteredPrograms);
+        };
         filterPrograms();
-    }, []);
+    }, [category,programs]);
 
-    useEffect(() => {
-        filterPrograms();
-    }, [category]);
 
-    const filterPrograms = () => {
-        let filteredPrograms = [];
-
-        if (category === "all") {
-            filteredPrograms = programs;
-        } else if (category === "progress") {
-            filteredPrograms = programs?.filter(
-                (program) => program.projectState === "inprogress"
-            );
-        } else if (category === "completed") {
-            filteredPrograms = programs?.filter(
-                (program) => program.projectState === "completed"
-            );
-        } else if (category === "onplan") {
-            filteredPrograms = programs?.filter(
-                (program) => program.projectState === "onplan"
-            );
-        }
-
-        setFilteredPrograms(filteredPrograms);
-    };
     return (
         <div className="flex flex-col p-5 gap-5 justify-center">
             <div className="w-full text-center">
@@ -57,8 +54,8 @@ function ProgramContainer({ programs }) {
             </div>
             <div className="flex flex-row flex-wrap gap-2 justify-center">
                 {filteredPrograms.length > 0 ? (
-                    filteredPrograms.map((program, index) => (
-                        <CardComponent program={program} key={index} />
+                    filteredPrograms.map((program) => (
+                        <CardComponent program={program} key={program._id} />
                     ))
                 ) : (
                     <div className="flex flex-col gap-3 w-1/2 items-center">

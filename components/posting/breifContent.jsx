@@ -3,7 +3,7 @@ import { DropDown, InputComponent } from "../inputComponent";
 export function BreifContent() {
     return (
         <div className='flex flex-col gap-5 p-5 w-full'>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"project Name"} name={"en.name"}
                     role={{
                         required: "project name is required"
@@ -22,7 +22,7 @@ export function BreifContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې نوم ولیکئ."} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"project owner"} name={"en.projectOwner"}
                     role={{
                         required: "project owner is required"
@@ -40,7 +40,7 @@ export function BreifContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې سپانسر نوم دننه کړئ"} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"location"} name={"en.location"}
                     role={{
                         required: "project location is required",
@@ -57,7 +57,7 @@ export function BreifContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې ځای ولیکئ"} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"project Duration"} name={"en.projectDuration"}
                     role={{
                         required: "project Duration is required",
@@ -81,7 +81,7 @@ export function BreifContent() {
 export function FinalContent() {
     return (
         <div className='flex flex-col gap-5 p-5 w-full'>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <DropDown label={"project catgory"} name={"en.projectType"}
                     role={{
                         required: "project Catgory is required",
@@ -122,7 +122,7 @@ export function FinalContent() {
                     ]}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"Project Budget"} name={"en.projectBudget"}
                     role={{
                         required: "project owner is required",
@@ -140,7 +140,7 @@ export function FinalContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې سپانسر نوم دننه کړئ"} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"Project Staff"} name={"en.projectStaff"}
                     role={{
                         required: "Project Staffs are required",
@@ -157,7 +157,7 @@ export function FinalContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې ځای ولیکئ"} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"Project Beneficiaries"} name={"en.projectBeneficiaries"}
                     role={{
                         required: "project Duration is required",
@@ -174,7 +174,7 @@ export function FinalContent() {
                     }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې موده ولیکئ"} type={"text"}
                 />
             </div>
-            <div className="flex flex-row gap-4 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <InputComponent label={"ProjectImplemented"} name={"projectImplemented"}
                     role={{
                         required: "project Duration is required",

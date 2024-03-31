@@ -4,11 +4,12 @@ import { Paragraph } from "../ParagraphContainer/PContainer"
 import { useEffect, useState } from "react"
 import { getImages } from "@/backend/controller/operation"
 import { PopUpّImage } from "../modal/popUp"
+import Image from "next/image"
 
 export function ImageShow() {
     const locale = useLocale()
     const [data, setData] = useState([])
-    const [state,setState] = useState(false)
+    const [state, setState] = useState(false)
 
     useEffect(() => {
         const getdata = async () => {
@@ -18,7 +19,7 @@ export function ImageShow() {
         getdata()
     }, [data])
 
-    const handleState = ()=>{
+    const handleState = () => {
         setState(!setState)
     }
     return (
@@ -30,7 +31,16 @@ export function ImageShow() {
             </div>
             <div className="mt-3 sm:mx-auto flex flex-col gap-3 w-full">
                 {
-                    data?.lenght == 0 && <div>Empty</div>
+                    data?.lenght == 0 && <div className="flex flex-col gap-3 w-1/2 items-center">
+                        <Image
+                            src={"/assets/noResults.png"}
+                            width={500}
+                            height={500}
+                            alt="no result image"
+                            className="w-1/3"
+                        />
+                        <p className="text-lg sm:text-3xl">No Result Found</p>
+                    </div>
 
 
                 }
