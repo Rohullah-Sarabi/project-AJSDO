@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import Loading from "@/app/[locale]/loading";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function ForGotPassword() {
     const [email, setEmail] = useState("")
@@ -30,27 +31,29 @@ function ForGotPassword() {
         e.preventDefault()
         
         const email = e.target[0].value;
+        console.log(email)
 
         if(!isValidEmail(email)){
             setError("email is invalid")
             return;
         }
         try {
-            const res = await axios.post(`${process.env.API_URL}/forgetPassword`,email)
-            if(res.status==400){
-                setError("user with this email is not registered.")
+            const {data} = await axios.post(`${process.env.API_URL}/api/forgetPassword`,{email})
+            console.log(data)
+            if(data.status==400){
+                toast.error(data.message)
             }        
-            if(res.status==200){
-                setError("")
+            if(data.status==200){
+                toast.success(data.message)
                 router.push(`${process.env.API_URL}/login`)
             }
         } catch (error) {
-            setError("Error, try again")
+            toast.error(error.message)
         }
     }
-    // if(sessionStatus==="loading"){
-    //     return <Loading/>
-    // }
+    if(sessionStatus==="loading"){
+        return <Loading/>
+    }
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -67,7 +70,7 @@ function ForGotPassword() {
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form className="space-y-6" onSubmit={submitHandler}>
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                        <label className="block text-sm font-medium leading-6 text-gray-900">
                             Email address
                         </label>
                         <div className="mt-2">
@@ -75,13 +78,13 @@ function ForGotPassword() {
                                 name="email"
                                 type="email"
                                 autoComplete="email"
+                                placeholder="Enter your email address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                         </div>
-                        <p className="text-red-600 text-lg mb-4">{error && error}</p>
                     </div>
 
                     <div>
