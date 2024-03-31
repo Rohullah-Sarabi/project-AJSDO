@@ -3,6 +3,7 @@ import AuthContext from "@/context/authContext";
 import Link from "next/link";
 import { useState } from "react";
 import { useContext, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const Register = () => {
     const { user, registerUser, error, clearErrors } = useContext(AuthContext)
@@ -18,13 +19,20 @@ const Register = () => {
         }
     }, [error])
 
-    const submitHandler = (e) => {
+    const submitHandler = async(e) => {
         e.preventDefault();
-        registerUser({ name, email, password })
-        if(user){
+        if(!name||!email||!password){
+            toast.error("Please fill all the inputs.")
+            return;
+        }
+        const result = await registerUser({ name, email, password })
+        if(result.status==200){
+            toast.success("user registered successfully!")
             setName("")
             setEmail("")
             setPassword("")
+        }else if(result.status==400){
+            toast.error(result.data)
         }
     }
     return (
