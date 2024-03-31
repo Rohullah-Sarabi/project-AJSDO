@@ -19,7 +19,10 @@ export default function Home() {
   const t = useTranslations("home")
 
   const [data, setData] = useState([])
+  const [programs, setProgram] = useState(null)
 
+
+  const locale = useLocale()
 
   useEffect(() => {
     const getdata = async () => {
@@ -29,8 +32,6 @@ export default function Home() {
     getdata()
   }, [data])
 
-  const [programs, setProgram] = useState(null)
-  const locale = useLocale()
 
   useEffect(() => {
     const fetchProgram = async () => {
@@ -65,7 +66,9 @@ export default function Home() {
           </div>
           {/* <Events /> */}
           <div className="flex flex-row flex-wrap gap-2 justify-center">
-
+            {
+              programs==null&&<Loading/>
+            }
             {
               Array.isArray(programs) && programs.length > 0 ? (
 
