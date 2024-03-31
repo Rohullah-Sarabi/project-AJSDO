@@ -40,12 +40,15 @@ export function ProgramDetails({ data, allPrograms }) {
             {
                 data[locale]?.summary.map((content, index) => (
                     <>
-                        <Image src={data?.images ? data.images[index].url : "/assets/3.jpg"} width={500} height={500} className="w-full sm:h-auto" />
+                        {data?.images && data.images[index] && (
+                            <Image src={data.images[index].url || "/assets/3.jpg"} width={500} height={500} className="w-full sm:h-auto" />
+                        )}
                         <Paragraph style={"text-sm sm:text-lg text-[#3c3744] text-justify p-2 w-full"}>
                             {content.content}
                         </Paragraph>
                     </>
                 ))
+                
             }
             <div className="w-full">
                 <Tab data={data[locale]} status={data} locale={locale} />

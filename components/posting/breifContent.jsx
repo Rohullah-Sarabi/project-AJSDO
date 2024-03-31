@@ -125,19 +125,19 @@ export function FinalContent() {
             <div className="flex flex-row gap-4 w-full">
                 <InputComponent label={"Project Budget"} name={"en.projectBudget"}
                     role={{
-                        required: "project owner is required",
-                    }} divStyle={"w-full"} placeholder={"Please enter project owner"} type={"text"}
+                        required: "project Budget required",
+                    }} divStyle={"w-full"} placeholder={"Please enter project Budget"} type={"text"}
                 />
                 <InputComponent label={"بودجه پروژه"} name={"fa.projectBudget"}
                     role={{
                         required: " بودجه پروژه الزامی می باشد",
 
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفا نام بودجه پروژه را درج نماید"} type={"text"}
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفا بودجه پروژه را درج نماید"} type={"text"}
                 />
                 <InputComponent label={"د پروژې بودجه"} name={"ps.projectBudget"}
                     role={{
                         required: "د پروژې بودجه اړین دی",
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې سپانسر نوم دننه کړئ"} type={"text"}
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د د پروژې بودجه"} type={"text"}
                 />
             </div>
             <div className="flex flex-row gap-4 w-full">
@@ -149,12 +149,12 @@ export function FinalContent() {
                 <InputComponent label={"کارمند های پروژه"} name={"fa.projectStaff"}
                     role={{
                         required: "د پروژې موقعیت ته اړتیا ده",
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفا محل اجرای پروژه را وارد کنید"} type={"text"}
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"لطفاتعداد کارمندان پروژه را وارد کنید"} type={"text"}
                 />
-                <InputComponent label={"ځای"} name={"ps.projectStaff"}
+                <InputComponent label={"د پروژې کارکوونکي"} name={"ps.projectStaff"}
                     role={{
-                        required: "محل پروژه مورد نیاز است",
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې ځای ولیکئ"} type={"text"}
+                        required: "د پروژې کارکوونکي",
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د د پروژې کارکوونکي"} type={"text"}
                 />
             </div>
             <div className="flex flex-row gap-4 w-full">
@@ -170,15 +170,15 @@ export function FinalContent() {
                 />
                 <InputComponent label={"د پروژې ګټه اخیستونکي"} name={"ps.projectBeneficiaries"}
                     role={{
-                        required: "د پروژې موده اړینه ده",
-                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د پروژې موده ولیکئ"} type={"text"}
+                        required: "د پروژې ګټه اخیستونکي اړینه ده",
+                    }} divStyle={"w-full text-end"} dir={"rtl"} placeholder={"مهرباني وکړئ د د پروژې ګټه اخیستونکي"} type={"text"}
                 />
             </div>
             <div className="flex flex-row gap-4 w-full">
-                <InputComponent label={"ProjectImplemented"} name={"projectImplemented"}
+                <InputComponent label={"ProjectImplemented By"} name={"projectImplemented"}
                     role={{
-                        required: "project Duration is required",
-                    }} divStyle={"w-full"} placeholder={"please enter project Duration"} type={"text"}
+                        required: "project",
+                    }} divStyle={"w-full"} placeholder={"please enter project Implementer"} type={"text"}
                 />
                 <DropDown label={"project State"} name={"projectState"}
                     role={{
