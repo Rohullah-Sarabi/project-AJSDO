@@ -46,6 +46,7 @@ export function ProgramDetails({ data, allPrograms }) {
                         </Paragraph>
                     </>
                 ))
+                
             }
             <div className="w-full">
                 <Tab data={data[locale]} status={data} locale={locale} />
