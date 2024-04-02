@@ -18,7 +18,7 @@ const nextConfig = {
         IMAGE_FILE: "/images",
         NEXTAUTH_URL:"http:localhost:3000",
         NEXTAUTH_SECRET: "AJSDO",
-        SMTP_PASSWORD: "bazs mcau cupe efvh",
+        SMTP_PASSWORD: "ruzz finy jrit wvzm",
         SMTP_EMAIL: "ajsdo.ngo@gmail.com"
     },
     images: {

@@ -27,6 +27,7 @@ export async function POST(request) {
         })
         return NextResponse.json({ message: "Success: email was sent", status: 200 })
     } catch (error) {
+        console.log(error)
         return NextResponse.json({ message: error.message ,status:400})
     }
 }
