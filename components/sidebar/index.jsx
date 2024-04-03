@@ -46,6 +46,7 @@ export function NavbarDashboard({state,changeState}) {
             <Dropdown.Item onClick={()=>changeState("postEvent")}>Post Event</Dropdown.Item>
             <Dropdown.Item onClick={()=>changeState("setting")}>Settings</Dropdown.Item>
             <Dropdown.Item onClick={()=>changeState("register")} >Register</Dropdown.Item>
+            <Dropdown.Item onClick={()=>changeState("users")} >Users</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item onClick={logoutHandler}>Sign out</Dropdown.Item>
           </Dropdown>

@@ -5,6 +5,7 @@ import Register from "@/components/auth/register";
 import Footer from "@/components/footer";
 import LanguageForm from "@/components/posting/post";
 import { Setting } from "@/components/setting";
+import { Users } from "@/components/setting/users";
 import { NavbarDashboard } from "@/components/sidebar";
 import { useEffect, useState } from "react";
 
@@ -36,6 +37,9 @@ function DashboardPage() {
                 }
                 {
                     menu=="setting" && <Setting/>
+                }
+                {
+                    menu=="users" && <Users/>
                 }
             </div>
             <Footer />

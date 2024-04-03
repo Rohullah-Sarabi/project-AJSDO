@@ -12,6 +12,7 @@ import Loading from "./loading";
 import CardComponent from "@/components/card";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 
 
@@ -24,26 +25,28 @@ export default function Home() {
 
   const locale = useLocale()
 
-  useEffect(() => {
-    const getdata = async () => {
-      const data = await getImages();
-      setData(data)
+  const fetchImages = async () => {
+    const data = await getImages();
+    setData(data)
+  }
+  const fetchPrograms= async () => {
+    try {
+      const { data } = await axios.get(`${process.env.API_URL}/api/programs/limit`);
+      setProgram(data.programs);
+    } catch (error) {
+      toast.error(error.message);
     }
-    getdata()
-  }, [data])
-
+  }
 
   useEffect(() => {
-    const fetchProgram = async () => {
-      try {
-        const fetchedPrograms = await getLimitPrograms();
-        setProgram(fetchedPrograms);
-      } catch (error) {
-        toast.error(error.message);
-      }
-    }
-    fetchProgram();
-  }, [programs]);
+    fetchImages();
+    fetchPrograms();
+    const refreshInterval = setInterval(fetchPrograms, 60000); // Refresh programs every 60 seconds (adjust the value as needed)
+
+    return () => {
+      clearInterval(refreshInterval); // Clear the interval when the component unmounts
+    };
+  }, []);
 
   return (
     <>
@@ -67,23 +70,23 @@ export default function Home() {
           {/* <Events /> */}
           <div className="flex flex-row flex-wrap gap-2 justify-center">
             {
-              programs==null&&<Loading/>
-            }
-            {
-              Array.isArray(programs) && programs.length > 0 ? (
+              programs == null ? <Loading /> : (
 
-                <div className="flex flex-row flex-wrap gap-2 justify-center">
-                  {programs.map((program, index) => (
-                    <CardComponent program={program} key={index} />
-                  ))}
-                </div>
+                programs && programs.length > 0 ? (
 
-              ) : (
-                <p>No programs available.</p>
+                  <div className="flex flex-row flex-wrap gap-2 justify-center">
+                    {programs.map((program, index) => (
+                      <CardComponent program={program} key={index} />
+                    ))}
+                  </div>
+
+                ) : (
+                  <p>No programs available.</p>
+                )
               )
             }
             {
-              Array.isArray(programs) && programs.length > 0 && <div className="w-full text-blue-700 text-sm sm:text-lg flex justify-center items-center">
+              programs && programs.length > 0 && <div className="w-full text-blue-700 text-sm sm:text-lg flex justify-center items-center">
                 <Link href={`${process.env.API_URL}/${locale}/program`}>{t("allprograms")}</Link>
               </div>
             }
