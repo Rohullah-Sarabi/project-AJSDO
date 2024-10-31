@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true,"Please enter your password"],
         minLength:[8,"Your password must be longer than 8 characters"],
-        select:false
+        required:true
     },
     resetToken:{
         type:String,
@@ -38,4 +38,5 @@ userSchema.pre("save",async function(next){
     }
     this.password = await bcrypt.hash(this.password,10)
 })
+
 export default mongoose.models.User|| mongoose.model("User",userSchema)

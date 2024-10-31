@@ -8,6 +8,7 @@ import { createContext } from "react"
 import { toast } from "react-toastify";
 
 const AuthContext = createContext();
+
 export const AuthProvider =({children})=>{
     const [user,setUser] = useState(null)
     const [error,setError] = useState(null)

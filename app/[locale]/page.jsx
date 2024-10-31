@@ -54,7 +54,7 @@ export default function Home() {
       <div className="w-full">
         {
           data?.length > 0 ?
-            <CarouselSilder data={data} /> : <Loading />
+            <CarouselSilder data={data} />:(data?.length==0?"": <Loading />)
         }
       </div>
       <div className="w-2/3 m-auto flex flex-col gap-5 justify-center mt-4 sm:p-5">
@@ -80,7 +80,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                ) : (
+                ) : (programs.length == 0 &&
                   <p>No programs available.</p>
                 )
               )

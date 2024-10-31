@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "AJSDO",
-  description: "Developed By",
+  description: "AJSDO website: Developed By Rohullah Sarabi",
 };
 
 export default function RootLayout({ children }) {

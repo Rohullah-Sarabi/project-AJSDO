@@ -33,7 +33,7 @@ function ContantPage() {
     return (
         <>
             <Navbar />
-            <div className="flex sm:flex-row flex-col h-fit sm:min-h-screen w-11/12 mx-auto">
+            <div className="flex sm:flex-row flex-col h-fit w-11/12 mx-auto">
                 <div className="flex flex-col p-5 sm:mt-24  gap-1 sm:gap-3 w-full sm:w-1/2 mx-3 sm:mx-0">
                     <Paragraph style={"text-base sm:text-2xl font-bold capitalize"} content={t('contact')} />
                     <Paragraph style={"text-sm sm:text-lg font-normal justify-start"} content={t('message')} />
@@ -41,10 +41,12 @@ function ContantPage() {
                 <FormProvider {...methods}>
                     <form
                         onSubmit={methods.handleSubmit(handleSubmit)}
-                        className="w-full sm:w-1/2 p-5">
-                        <div className="grid gap-6 mb-6 md:grid-cols-2">
+                        className="w-full sm:w-1/2 p-5 mr-5">
+                        <div className="grid gap-6 mb-3 md:grid-cols-2">
 
-                            <InputComponent label={t('name.label')} name={"firstName"}
+                            <InputComponent 
+                            // label={t('name.label')} 
+                            name={"firstName"}
                                 role={{
                                     required: t("name.required"),
                                     pattern: {
@@ -54,7 +56,9 @@ function ContantPage() {
                                 }} divStyle={""} placeholder={t("name.placeholder")} type={"text"}
                             />
 
-                            <InputComponent label={t("lastName.label")} name={"lastName"}
+                            <InputComponent
+                            //  label={t("lastName.label")} 
+                             name={"lastName"}
                                 role={{
                                     pattern: {
                                         value: locale == "en" ? /^[A-Za-z]{3,}(?:\s[A-Za-z]+)*$/ : /^[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]{3,}(?:\s[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+)*$/,
@@ -64,7 +68,9 @@ function ContantPage() {
                                 divStyle={""} placeholder={t("lastName.placeholder")} type={"text"}
                             />
                         </div>
-                        <InputComponent label={t("subject.label")} name={"subject"}
+                        <InputComponent 
+                        // label={t("subject.label")} 
+                        name={"subject"}
                             role={{
                                 required: t("email.required"),
                                 pattern: {
@@ -72,10 +78,12 @@ function ContantPage() {
                                     message: t("subject.roleMessage")
                                 }
                             }}
-                            divStyle={"my-5"} type={"text"}
+                            divStyle={"my-3"} type={"text"}
                             placeholder={t("subject.placeholder")}
                         />
-                        <InputComponent label={t("email.label")} name={"email"}
+                        <InputComponent 
+                        // label={t("email.label")}
+                         name={"email"}
                             role={{
                                 required: t("email.required"),
                                 pattern: {
@@ -83,12 +91,14 @@ function ContantPage() {
                                     message: t("email.roleMessage")
                                 }
                             }}
-                            divStyle={"mb-6"} placeholder={t("email.placeholder")} type={"email"}
+                            divStyle={"mb-3"} placeholder={t("email.placeholder")} type={"email"}
 
                         />
-                        <TextAreaValidation rows={"8"} label={t("content.label")} role={{
+                        <TextAreaValidation rows={"8"} 
+                        // label={t("content.label")}
+                         role={{
                             required: t("content.required")
-                        }} divStyle={"mb-6"} placeholder={t("content.placeholder")} name={"message"} />
+                        }} divStyle={"mb-3"} placeholder={t("content.placeholder")} name={"message"} />
 
                         <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send</button>
                     </form>

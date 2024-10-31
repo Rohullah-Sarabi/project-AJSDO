@@ -7,8 +7,8 @@ const withNextintl = createNextIntlPlugin();
 
 const nextConfig = {
     env: {
-        // DB_URL: "mongodb://127.0.0.1:27017/AJSDO",
-        DB_URL:"mongodb+srv://rohullah:a7TnzBGJ48egow7f@cluster0.qlrcvq0.mongodb.net/AJSDO",
+        DB_URL: "mongodb://127.0.0.1:27017/AJSDO",
+        // DB_URL:"mongodb+srv://rohullah:a7TnzBGJ48egow7f@cluster0.qlrcvq0.mongodb.net/AJSDO",
         API_URL: "http://localhost:3000",
         // COMPLETE_IMAGE_LINK address to move images there
         COMPLETE_IMAGE_LINK:`C:/Users/Sarabi/Desktop/projects/afghanistan-justic-and-sustainable-development-organization/public/images`,
